@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/354216b200.js" crossorigin="anonymous"></script>
+    <title>Chat</title>
+
+    <main>
+
+    <div class="conteudo"> 
+
+                <div class="cabecalho" id="cab" onclick="ocultarExibir()">
+                    <div class="row">
+                    <div class="col-2 " class = "img_cabecalho">
+                        <a href="profile_index.html">         <img src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" id="foto" class="profile_pic" width="auto" height="60px"> </a>
+                    </div>
+                    <div class="col-10"  class="info_cabecalho">
+                        <h3 class="nome">Mariane Felix<i class="fa-solid fa-angle-down" id="seta"></i></h3>
+                        <h5 class="subtitulo">Miata - PX314J - vermelho</h5>
+                    </div>
+                    </div>
+                </div>
+
+                        <!-- cabecalho pequeno-->
+                        <div class="cabecalho_minimizado" id="cab_minimizado" onclick="ocultarExibir()">
+                            <div class="row">
+                            <div class="col-2 " class = "img_cabecalho">
+                                  <img src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" id="foto" class="profile_pic_minimizado" width="auto" height="50px">
+                            </div>
+                            <div class="col-10"  class="info_cabecalho">
+                                <h3 class="nome">Mariane Felix<i class="fa-solid fa-angle-up" id="seta"></i></h3>
+                            </div>
+                            </div>
+                                    <div class="smartphone_icon_chat">
+                                        <h3><i class="fa-solid fa-comment-dots"></i></h3>
+                                    </div>
+                        </div>
+                        <!-- cabecalho pequeno-->
+        
+           <div id="cab1" class="conteudo_minimizado">
+
+        <div class="caixa-de-mensagens">
+            <p class="message">Eae</p>
+            <p class="message user_message">Beleza?</p>
+        </div>
+
+        <div class="mensagem">
+            <form>
+                <input type="text" name="">
+                <button class="click"><i class="fa-solid fa-car-on"></i></i></button>
+                <button class="no_click" onclick="send()"><i class="fa-solid fa-car"></i></button>
+            </form>
+        </div>
+
+    </div>
+    </div>
+    </main>
+
+</head>
+
+<script>
+
+    var visibilidade=true;
+
+    function ocultarExibir()    {
+
+        if(visibilidade) { //se for true
+            document.getElementById("cab").style.display="none"; //cab_normal some
+            document.getElementById("cab1").style.display="none"; //cab_normal some
+            document.getElementById("cab_minimizado").style.display="block"; //cab_minimizado aparece
+            visibilidade = false;
+        }   else { //se for false
+            document.getElementById("cab").style.display="block"; //cab_normal aparece
+            document.getElementById("cab_minimizado").style.display="none"; //cab_minimizado some
+            document.getElementById("cab1").style.display="block"; //cab_normal some
+            visibilidade = true;
+        }
+
+    }
+
+            const buttonEffect = [
+            { opacity: 0 },
+            { opacity: 1 }
+            ];
+
+            const ButtonEffectTiming = {
+            duration: 2000000000,
+            iterations: 1,
+            }
+
+            const btnSend = document.querySelector(".no_click");
+
+            btnSend.addEventListener('click', () => {
+            btnSend.animate(buttonEffect, ButtonEffectTiming);
+            });
+
+
+// The picker must have a root element to insert itself into
+const rootElement = document.querySelector('#pickerContainer');
+
+// Create the picker
+const picker = createPicker({ rootElement });
+
+// The picker emits an event when an emoji is selected. Do with it as you will!
+picker.addEventListener('emoji:select', event => {
+  console.log('Emoji selected:', event.emoji);
+});
+
+</script>
+
+<body>
+
+    
+</body>
+</html>
