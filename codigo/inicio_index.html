@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" type="text/css" href="inicio_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/354216b200.js" crossorigin="anonymous"></script>
+
+    <title>GPS</title>
+</head>
+
+<main>
+
+    <div class="centro">
+        <h1>GPS - PUC CARONA</h1>
+    </div>
+    <div class="meio">
+
+    </div>
+    
+    <div class="contain3r">
+        <div id="conteudo_chat_copia"> <!-- Div para receber o chat importado --> </div>
+    </div>
+
+
+    </main>
+
+        <script> //parte de scripts
+
+            //Puxa a div da pagina do chat.
+            var http = new XMLHttpRequest();
+            var url_ = "chat_index.html"; // página de onde virá a div
+            http.open("GET", url_, true);
+            http.onreadystatechange = function(){
+                if(http.readyState == 4){
+                    var html = http.responseText;
+                    // converte o retorno em elementos HTML
+                    html = new DOMParser().parseFromString(html, "text/html");
+                    document.getElementById('conteudo_chat_copia').innerHTML = html.getElementById('conteudo_chat_original').innerHTML.trim();
+                }
+            }
+                http.send(null);
+
+            //Controlo o chat fechado e o chat aberto.
+            var visibilidade=false;
+            function ocultarExibir()    {
+
+                if(visibilidade) { //se for true
+                    document.getElementById("cabecalho_id").style.display="none"; //cab_normal some
+                    document.getElementById("conteudo_mensagens_id").style.display="none"; //cab_normal some
+                    document.getElementById("cabecalho_minimizado_id").style.display="block"; //cab_minimizado aparece
+                    visibilidade = false;
+                }   else { //se for false
+                    document.getElementById("cabecalho_id").style.display="block"; //cab_normal aparece
+                    document.getElementById("cabecalho_minimizado_id").style.display="none"; //cab_minimizado some
+                    document.getElementById("conteudo_mensagens_id").style.display="block"; //cab_normal some
+                    visibilidade = true;
+                }
+            }
+
+        </script>
+
+        <style>
+
+                        .contain3r {
+                            position: fixed;
+                            z-index: 500;
+                            padding-bottom: 50px;
+
+                        }
+                        .conteudo_chat {
+                            padding-bottom: 250px;
+
+                        }
+                        footer {
+                            position: fixed;
+
+                        }
+
+        </style>
+</html>

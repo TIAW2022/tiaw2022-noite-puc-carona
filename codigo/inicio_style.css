@@ -1,0 +1,19 @@
+@import url(chat_style.css);
+
+.centro {
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+h1 {
+    text-align: center;
+}
+.h3info {
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+body {
+    background-color: rgb(202, 207, 245);
+} 
