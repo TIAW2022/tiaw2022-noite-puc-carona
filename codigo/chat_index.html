@@ -1,8 +1,11 @@
+<!-- 
+    ESSA PAGINA SEGUE O WIREFRAME PRODUZIDO NA PRIMEIRA SPRINT.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,149 +14,145 @@
     <script src="https://kit.fontawesome.com/354216b200.js" crossorigin="anonymous"></script>
     <link rel="icon" type="imagem/png" href="/Assets/logo.png"/>
     <title>Chat</title>
+    
+    <body>
 
-    <main>
- 
-        <header>  <!-- Cabecalho da pagina -->
-            <div class="logo-header">
-                <a href = "#">
-                    <img src="/codigo/Assets/logo-nome.png" class="logo-nome">
-                </a>
-            </div>
-        </header>
+        <main>
+    
+            <header>  <!-- Cabecalho da pagina -->
 
-        <div class="contain3r">
-         <!-- Armazena todo conteudo do chat -->
-        <div id="conteudo_chat_original" class="conteudo_chat">
-
-            <!-- cabecalho grande (chat aberto)-->
-            <div class="cabecalho" id="cabecalho_id" onclick="ocultarExibir()">
-
-                <div class="row"> <!-- Criado para dividir o cabeçalho em duas partes, img e texto-->
-                    <div class="col-2 " class="img_cabecalho">
-                        <a href="#"> 
-                            <img src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" class="profile_pic foto" width="auto" height="60px"> 
-                        </a>
-                    </div>
-                    <div class="col-10" class="informacoes_cabecalho">
-                        <h3 class="name">Mariane Felix<i class="fa-solid fa-angle-down" id="icone_setas_chat"></i></h3>
-                        <h5 class="about">Miata - PX314J - vermelho</h5>
-                    </div>
+                <div class="logo-header">
+                    <a href = "#">
+                        <img src="/codigo/Assets/logo-nome.png" class="logo-nome">
+                    </a>
                 </div>
 
-            </div>
+            </header>
 
-            <!-- cabecalho minimizado (chat fechado)-->
-            <div class="cabecalho_minimizado" id="cabecalho_minimizado_id" onclick="ocultarExibir()">
+            <div class="container_chat">
+            <!-- Armazena todo conteudo do chat -->
+            <div id="conteudo_chat_original" class="conteudo_chat">
 
-                <div class="row"> <!-- Criado para dividir o cabeçalho em duas partes, img e texto-->
-                    <div class="col-2 " class="img_cabecalho">
-                        <img src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" class="profile_pic_minimizado foto" width="auto" height="50px">
-                    </div>
-                    <div class="col-10" class="informacoes_cabecalho">
-                        <h3 class="name">Mariane Felix<i class="fa-solid fa-angle-up" id="icone_setas_chat"></i></h3>
-                    </div>
-                </div>
+                <!-- cabecalho grande (chat aberto)-->
+                <div class="cabecalho" id="cabecalho_id" onclick="ocultarExibir()">
 
-                <div id="icone_chat" > <!-- Icone substitui cabecalho em telas pequenas -->
-                    <h3><i class="fa-solid fa-comment-dots"></i></h3>
-                </div>
-            </div>
-
-
-
-
-            <!-- conteudo mensagens-->
-            <div id="conteudo_mensagens_id" class="conteudo_mensagens">
-
-                <div class="caixa-de-mensagens"> <!-- mostra as mensagens enviadas-->
-                    <p class="message other-user_message">Eae 👍</p>
-                    <p class="message user_message">Oi, beleza?</p>
-                    <p class="message other-user_message">Tranquilo! Chego em 1 minuto.</p>
-                    <p class="message other-user_message">Cheguei</p>
-                    <p class="message user_message">Não te vi</p>
-                    <p class="message user_message">Me achou?</p>
-                    <p class="message other-user_message">Achei, eu to perto da padaria</p>
-                    <p class="message user_message">Ah, verdade kkkkk</p>
-                    <p class="message other-user_message">😂😂😂😂</p>
-                    <p class="message other-user_message">Eae, to saindo agora</p>
-                    <p class="message user_message">Opa, eu também!</p>
-                    <p class="message other-user_message">Precisa de carona?</p>
-                    <p class="message other-user_message">Ou vai tentar a sorte com onibus?🤔</p>
-                    <p class="message user_message">Não sou doido 🥴</p>
-                    <p class="message user_message">Pelo puc carona é beem mais seguro</p>
-                    <p class="message other-user_message">To brincando 🤡 </p>
-                    <p class="message other-user_message">kkkkkkkkk </p>
-                    <p class="message other-user_message">Eu sei 🤪</p>     
-                    <p class="message user_message">Minha amiga vai pra casa também, ela pode ir junto?</p>
-                    <p class="message other-user_message">É claro, chama ela aí</p>
-                    <p class="message other-user_message">To esperando na portaria</p>
-                    <p class="message user_message">Beleza</p>
-                    <p class="message user_message">To chegando</p>
-                    <p class="message user_message">Achei você já</p>
-                    <p class="message other-user_message">👌</p>
-                </div>
-
-                <div class="caixa-de-envio"> <!-- é a caixa de escrever e o botão de envio-->
-                    <form>
-                        <input type="text" name="" placeholder="  Digite sua mensagem... ">
-                        <div class="botao_div">
-                            <button class="click"><i class="fa-solid fa-car-on"></i></i></button>
-                            <button class="no_click" onclick="send()"><i class="fa-solid fa-car"></i></button>
+                    <div class="row"> <!-- Criado para dividir o cabeçalho em duas partes, img e texto-->
+                        <div class="col-2 " class="img_cabecalho">
+                            <a href="#"> 
+                                <img src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" class="profile_pic foto" width="auto" height="60px"> 
+                            </a>
                         </div>
+                        <div class="col-10" class="informacoes_cabecalho">
+                            <h3 class="name">Mariane Felix<i class="fa-solid fa-angle-down" id="icone_setas_chat"></i></h3>
+                            <h5 class="about">Miata - PX314J - vermelho</h5>
+                        </div>
+                    </div>
 
-                    </form>
+                </div>
+
+                <!-- cabecalho minimizado (chat fechado)-->
+                <div class="cabecalho_minimizado" id="cabecalho_minimizado_id" onclick="ocultarExibir()">
+
+                    <div class="row"> <!-- Criado para dividir o cabeçalho em duas partes, img e texto-->
+                        <div class="col-2 " class="img_cabecalho">
+                            <img src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" class="profile_pic_minimizado foto" width="auto" height="50px">
+                        </div>
+                        <div class="col-10" class="informacoes_cabecalho">
+                            <h3 class="name">Mariane Felix<i class="fa-solid fa-angle-up" id="icone_setas_chat"></i></h3>
+                        </div>
+                    </div>
+
+                    <div id="icone_chat" > <!-- Icone substitui cabecalho em telas pequenas -->
+                        <h3><i class="fa-solid fa-comment-dots"></i></h3>
+                    </div>
+
+                </div>
+
+                <!-- conteudo mensagens-->
+                <div id="conteudo_mensagens_id" class="conteudo_mensagens">
+
+                    <div class="caixa-de-mensagens"> <!-- mostra as mensagens enviadas-->
+                        <p class="message other-user_message">Eae 👍</p>
+                        <p class="message user_message">Oi, beleza?</p>
+                        <p class="message other-user_message">Tranquilo! Chego em 1 minuto.</p>
+                        <p class="message other-user_message">Cheguei</p>
+                        <p class="message user_message">Não te vi</p>
+                        <p class="message user_message">Me achou?</p>
+                        <p class="message other-user_message">Achei, eu to perto da padaria</p>
+                        <p class="message user_message">Ah, verdade kkkkk</p>
+                        <p class="message other-user_message">😂😂😂😂</p>
+                        <p class="message other-user_message">Eae, to saindo agora</p>
+                        <p class="message user_message">Opa, eu também!</p>
+                        <p class="message other-user_message">Precisa de carona?</p>
+                        <p class="message other-user_message">Ou vai tentar a sorte com onibus?🤔</p>
+                        <p class="message user_message">Não sou doido 🥴</p>
+                        <p class="message user_message">Pelo puc carona é beem mais seguro</p>
+                        <p class="message other-user_message">To brincando 🤡 </p>
+                        <p class="message other-user_message">kkkkkkkkk </p>
+                        <p class="message other-user_message">Eu sei 🤪</p>     
+                        <p class="message user_message">Minha amiga vai pra casa também, ela pode ir junto?</p>
+                        <p class="message other-user_message">É claro, chama ela aí</p>
+                        <p class="message other-user_message">To esperando na portaria</p>
+                        <p class="message user_message">Beleza</p>
+                        <p class="message user_message">To chegando</p>
+                        <p class="message user_message">Achei você já</p>
+                        <p class="message other-user_message">👌</p>
+                    </div>
+
+                    <div class="caixa-de-envio"> <!-- é a caixa de escrever e o botão de envio-->
+                       
+                        <form>
+                            <input type="text" name="" placeholder="  Digite sua mensagem... ">
+                            <div class="botao_div">
+                                <button class="click"><i class="fa-solid fa-car-on"></i></i></button>
+                                <button class="no_click" onclick="send()"><i class="fa-solid fa-car"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+
                 </div>
 
             </div>
-        </div>
-    </div>
+            </div>
 
- 
-   
-    <footer >
-        
-        <div class="footer">
-        © 2022 Copyright:
-        <a class="texto-footer" href="#">Puc Carona</a>
-        </div>
-    </footer>
+            <footer >   <!-- Footer -->
+                <div class="footer">
+                © 2022 Copyright:
+                <a class="texto-footer" href="#">Puc Carona</a>
+                </div>
+            </footer>
 
-    </main>
+        </main>
 
-  <!-- Footer -->
 </head>
 
-<script>
+    <script>
 
             //Controlo o chat fechado e o chat aberto.
-            var visibilidade=true;
-            function ocultarExibir()    {
+        var visibilidade=true;
+        function ocultarExibir()    {
 
-                if(visibilidade) { //se for true
-                    document.getElementById("cabecalho_id").style.display="none"; //cab_normal some
-                    document.getElementById("conteudo_mensagens_id").style.display="none"; //cab_normal some
-                    document.getElementById("cabecalho_minimizado_id").style.display="block"; //cab_minimizado aparece
-                    visibilidade = false;
-                }   else { //se for false
-                    document.getElementById("cabecalho_id").style.display="block"; //cab_normal aparece
-                    document.getElementById("cabecalho_minimizado_id").style.display="none"; //cab_minimizado some
-                    document.getElementById("conteudo_mensagens_id").style.display="block"; //cab_normal some
-                    visibilidade = true;
-                }
+            if(visibilidade) { //se for true
+                document.getElementById("cabecalho_id").style.display="none"; //cabecalho normal some
+                document.getElementById("conteudo_mensagens_id").style.display="none"; //conteudo some
+                document.getElementById("cabecalho_minimizado_id").style.display="block"; //cabecalho minimizado aparece
+                visibilidade = false;
+            }   else { //se for false
+                document.getElementById("cabecalho_id").style.display="block"; //cabecalho normal aparece
+                document.getElementById("cabecalho_minimizado_id").style.display="none"; //cabecalho minimizado some
+                document.getElementById("conteudo_mensagens_id").style.display="block"; //conteudo aparece
+                visibilidade = true;
             }
+        }
 
             //Animação botão de envio mensagem.
-            const buttonEffect = [ { opacity: 0 }, { opacity: 1 }];
-            const ButtonEffectTiming = { duration: 200, iterations: 1,}
-            const btnSend = document.querySelector(".no_click");
+        const buttonEffect = [ { opacity: 0 }, { opacity: 1 }];
+        const ButtonEffectTiming = { duration: 200, iterations: 1,}
+        const btnSend = document.querySelector(".no_click");
             btnSend.addEventListener('click', () => { btnSend.animate(buttonEffect, ButtonEffectTiming);});
-            
-
-</script>
-
-<body>
-
+                
+    </script>
 
 </body>
 

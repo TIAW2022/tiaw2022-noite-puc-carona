@@ -3,20 +3,204 @@
 /*controla informações gerais*/
 body {
     background-color: rgb(222, 226, 235);
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(190, 227, 248,1)'/%3E%3Ccircle cx='20' cy='20' r='1' fill='rgba(247, 250, 252,1)'/%3E%3Ccircle cx='20' cy='20' r='1' fill='rgba(99, 179, 237,1)'/%3E%3Ccircle cx='-20' cy='20' r='1' fill='rgba(99, 179, 237,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ")
 }
 main {
     position: relative;
     height: 100vh;
-
 }
-.contain3r {
+
+/* Configurações gerais do chat */
+.container_chat {
     height: 700px;
     width: 100%;
     position: absolute;
     bottom: 0;
     margin:0; 
 }
+.conteudo_chat {
+    /*chat do projeto de interface*/
+    border-radius: 20px 50px 0px 0px;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin:0 auto;
+    top: 9%;
+    transform: translate(-50%);
+}
+#conteudo_chat_copia { /*chat que vai ficar na pagina do gps*/
+    border-radius: 20px 50px 0px 0px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+    left: 85%;
+    margin:0 auto;
+    margin-bottom: 0px;
+    transform: translate(-85%);
+}
 
+/* Cabeçalho */
+.cabecalho {
+    /*cabecalho grande (chat aberto) */
+    border-radius: 20px 50px 0px 0px;
+    background: rgb(15, 150, 213);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 5px 2px 20px 1px ;
+    display: inherit;
+}
+.cabecalho:hover {
+    color: rgb(43, 39, 99);
+}
+.cabecalho_minimizado {
+    /* cabecalho minimizado (chat fechado) */
+    border-radius: 10px 10px 0px 0px;
+    background: rgb(15, 150, 213);
+    cursor: pointer;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0px;
+    box-shadow: 5px 2px 20px 1px ;
+}
+.cabecalho_minimizado:hover {
+    color: rgb(43, 39, 99);
+}
+.name {
+    padding: 10px 0px 0px 10px;
+    font-weight: 680;
+}
+
+.about {
+    padding: 0px 0px 0px 15px;
+    color: rgb(96, 84, 84);
+}
+.profile_pic {
+    margin-top: 10px;
+    margin-left: 5px;
+    display: inline;
+}
+.foto {
+    border-radius: 100%;
+}
+.profile_pic_minimizado {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    display: inline;
+}
+#icone_setas_chat {     /* Icones de chat aberto ou fechado*/
+    display: inline;
+    padding-left: 10px;
+    height: 26px;
+    width: 26px;
+}
+
+/* Referente a parte das mensagens, input, botão de envio */
+.conteudo_mensagens {
+    /* Toda parte de mensagens */
+    box-shadow: 5px 2px 20px 1px ;
+    width: auto;
+    height: 85.5%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(15, 150, 213);
+    background-color: rgb(210, 215, 234);
+    position: relative;
+    border-radius: 0px 0px 10px 10px;
+    display:inherit;
+}
+.caixa-de-mensagens {  /* caixa onde ficam as mensagens*/
+    height: 90%;
+    overflow: auto;
+    margin: 10px 15px 10px 15px;
+}
+.caixa-de-envio {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 10%;
+}
+.message {  /* Todas as mensagens*/
+    margin: 10px;
+    width: fit-content;
+    background-color: rgb(82, 149, 197);
+    padding: 3px 10px 3px 10px;
+    border-radius: 4px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    color: rgb(33, 18, 18);
+    font-weight: 2px;
+    box-shadow: 1px 1px 10px rgb(125, 123, 123);
+}
+.user_message { 
+    margin-left: auto;
+    background-color: rgb(135, 174, 241);
+}
+
+#icone_chat {
+    display: none;
+}
+
+.click {  /* Icones btn carro com efeito*/
+    position: absolute;
+    height: 40px;
+}
+.no_click {  /* Icones btn carro*/
+    position: relative;
+    opacity: 100;
+    height: 40px;
+}
+.no_click:hover { 
+    color: rgb(2, 64, 248);
+}
+
+form {  
+    display: flex;
+    padding: 0px 10px 0px 10px;
+}
+form input {
+    flex: 1;
+    height: 40px;
+    border: 2px solid rgb(97, 97, 154);
+    outline: none;
+    padding-left: 5px;
+    font-size: 16px;
+    border-radius: 10px 0px 0px 0px;
+    width: auto;
+}
+form button {
+    padding-left: 5px;
+    width: 40px;
+    border-radius: 0px 25px 5px 1px;
+    outline: none;
+    border: none;
+    background-color: rgb(15, 150, 213);
+    color: rgb(23, 17, 17);
+    border: 2px solid rgb(97, 97, 154);
+}
+
+/* HEADER */ 
+header {
+    width: 100%;
+}
+.logo-nome  {
+    width: 250px;
+}
+.logo-header {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 3px;
+    border-radius: 10px;
+    background: rgb(15, 150, 213);
+    position: absolute;
+    box-shadow: 5px 2px 20px 1px ;
+}
+
+/* FOOTER */
 footer {
     color: white;
     background: rgb(7, 126, 182);
@@ -35,221 +219,15 @@ footer a {
     color: rgb(255, 255, 255);
 }
 
-.conteudo_chat {
-    /*chat do projeto de interface*/
-    border-radius: 20px 50px 0px 0px;
-    width: 400px;
-    height: 600px;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    margin:0 auto;
-    top: 9%;
-    transform: translate(-50%);
-
-}
-
-#conteudo_chat_copia {
-    /*chat que vai ficar na pagina do gps*/
-    border-radius: 20px 50px 0px 0px;
-    width: 400px;
-    height: 500px;
-    position: absolute;
-    bottom: 0px;
-    left: 85%;
-    margin:0 auto;
-    margin-bottom: 0px;
-    transform: translate(-85%);
-}
-.cabecalho {
-    /*cabecalho grande (chat aberto) */
-    border-radius: 20px 50px 0px 0px;
-    background: rgb(15, 150, 213);
-    position: relative;
-    cursor: pointer;
-    box-shadow: 5px 2px 20px 1px ;
-
-}
-
-.cabecalho:hover {
-    color: rgb(43, 39, 99);
-}
-
-.cabecalho_minimizado {
-    /* cabecalho minimizado (chat fechado) */
-    border-radius: 10px 10px 0px 0px;
-    background: rgb(15, 150, 213);
-    cursor: pointer;
-    position:absolute;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 0px;
-    box-shadow: 5px 2px 20px 1px ;
-
-}
-.conteudo_mensagens { 
-    display:inherit; /*aquui*/
-}
-.cabecalho {
-    display: inherit;
-}
-.cabecalho_minimizado:hover {
-    color: rgb(43, 39, 99);
-}
-
-.conteudo_mensagens {
-    /* Toda parte de mensagens */
-    box-shadow: 5px 2px 20px 1px ;
-    width: auto;
-    height: 85.5%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(15, 150, 213);
-    background-color: rgb(210, 215, 234);
-    position: relative;
-    border-radius: 0px 0px 10px 10px;
-}
-
-.name {
-    padding: 10px 0px 0px 10px;
-    font-weight: 680;
-}
-
-.about {
-    padding: 0px 0px 0px 15px;
-    color: rgb(96, 84, 84);
-}
-
-.profile_pic {
-    margin-top: 10px;
-    margin-left: 5px;
-    display: inline;
-}
-
-.foto {
-    border-radius: 100%;
-}
-
-.profile_pic_minimizado {
-    margin-top: 5px;
-    margin-left: 5px;
-    padding-bottom: 5px;
-    display: inline;
-}
-
-#icone_setas_chat {     /* Icones de chat aberto ou fechado*/
-    display: inline;
-    padding-left: 10px;
-    height: 26px;
-    width: 26px;
-}
-
-.click {  /* Icones btn carro*/
-    position: absolute;
-    height: 40px;
-}
-
-.no_click {  /* Icones btn carro*/
-    position: relative;
-    opacity: 100;
-    height: 40px;
-}
-
-.no_click:hover { 
-    color: rgb(2, 64, 248);
-}
-
-form {  /* Formulario*/
-    display: flex;
-    padding: 0px 10px 0px 10px;
-}
-
-form input {
-    flex: 1;
-    height: 40px;
-    border: 2px solid rgb(97, 97, 154);
-    outline: none;
-    padding-left: 5px;
-    font-size: 16px;
-    border-radius: 10px 0px 0px 0px;
-    width: auto;
-}
-
-form button {
-    padding-left: 5px;
-    width: 40px;
-    border-radius: 0px 25px 5px 1px;
-    outline: none;
-    border: none;
-    background-color: rgb(15, 150, 213);
-    color: rgb(23, 17, 17);
-    border: 2px solid rgb(97, 97, 154);
-}
-
-.message {  /* Todas as mensagens*/
-    margin: 10px;
-    width: fit-content;
-    background-color: rgb(82, 149, 197);
-    padding: 3px 10px 3px 10px;
-    border-radius: 4px;
-    margin-top: 6%;
-    margin-bottom: 6%;
-    color: rgb(33, 18, 18);
-    font-weight: 2px;
-    box-shadow: 1px 1px 10px rgb(125, 123, 123);
-}
-
-.user_message { 
-    margin-left: auto;
-    background-color: rgb(135, 174, 241);
-}
-
-.caixa-de-mensagens {  /* caixa onde ficam as mensagens*/
-    height: 90%;
-    overflow: auto;
-    margin: 10px 15px 10px 15px;
-}
-
- /* Esconde a barra de scroll Chrome, Safari and Opera */
-.caixa-de-mensagens::-webkit-scrollbar {
+.caixa-de-mensagens::-webkit-scrollbar { /* Esconde a barra de scroll Chrome, Safari and Opera */
     display: none;
 }
- /* Esconde a barra de scroll IE, edge e firefox */
-.caixa-de-mensagens {
+.caixa-de-mensagens {  /* Esconde a barra de scroll IE, edge e firefox */
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.caixa-de-envio {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 10%;
-}
-
-#icone_chat {
-    display: none;
-}
-
-
-/* HEADER */ 
-
-header {
-    width: 100%;
-}
-.logo-nome  {
-    width: 250px;
-}
-
-.logo-header {
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 3px;
-    border-radius: 10px;
-    background: rgb(15, 150, 213);
-    position: absolute;
-}
-/* em telas pequenas */
+/* EM TELAS PEQUENAS */
 @media (max-width: 767.98px) {
     /*controla o chat/cabecalho minimizado;*/
 
@@ -278,17 +256,10 @@ header {
     .conteudo_chat {
         right: 0;
     }
-    .contain3r {
+    .container_chat {
         width: 100%;
     }
-
     #icone_chat {
         display: block;
     }
-    /* header */
-
-
-}
-@media (min-width: 576px) {
-
 }
