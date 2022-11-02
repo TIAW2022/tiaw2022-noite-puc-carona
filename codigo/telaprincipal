@@ -41,7 +41,7 @@
                     <div class="card" style="width: 70rem;">
                         <img src="imagens/carros em movimentos .jpeg" class="card-img-top" alt="carros em movimentos">
                         <div class="card-body">
-                          <p class="card-text">O projeto PUC Caronas foi desenvolvido para facilitar a locomoção dos membros da PUC Minas São Gabriel, o intuito é ajudar alunos e funcionários da Universidade chegar na Faculdade e em casa com mais facilidade e segurança</p>
+                          <h5 class="card-text">O projeto PUC Caronas foi desenvolvido para facilitar a locomoção dos membros da PUC Minas São Gabriel, o intuito é ajudar alunos e funcionários da faculdade chegar em casa e na PUC com mais facilidade e segurança. Faça seu cadastro em nossa plataforma e pegue sua carona a qualquer momento quando estiver indo para faculdade ou quando estiver voltando para casa</h5>
                         </div>
                       </div>
                 </div>
