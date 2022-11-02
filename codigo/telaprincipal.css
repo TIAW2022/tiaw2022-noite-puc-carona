@@ -1,0 +1,53 @@
+.header{
+background-color:rgb(15, 150, 213);
+margin-bottom: 20px;
+text-align: center;
+}
+
+.header_area{
+
+    padding: 20px;
+}
+
+.logo{
+    width: 180px;
+}
+
+.card{
+text-align: center;
+}
+
+.menu_area{
+    margin-top:30px;
+
+}
+.menu_area nav a{
+    background-color:rgb(255,255,255);
+    color:rgb(0, 0, 0);
+}
+
+.menu_area nav a:hover{
+    background-color:rgb(238, 228, 228);
+}
+
+.active{
+    background-color:rgb(255, 165, 0) !important;
+}
+
+
+.main{
+background-color:rgb(255, 255, 255);
+
+}
+
+.footer{
+    background-color:rgb(15, 150, 213);
+    margin-top: 20px;
+    color: white;
+
+}
+
+.footer_area{
+    padding: 20px;
+    text-align: center;
+}
