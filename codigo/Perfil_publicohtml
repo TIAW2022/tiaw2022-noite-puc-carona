@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href="style.css">
+    <link rel= "stylesheet" href="tiaw.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>Perfil Publico</title>
 </head>
 <body>
     <section class="h-100 gradient-custom-2">
@@ -16,17 +16,14 @@
             <div class="col col-lg-9 col-xl-7">
               <div class="card">
                 <div class="rounded-top text-white d-flex flex-row" style="background-color: rgb(25, 62, 184); height:200px;">
-                  <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                  <div class="ms-4 mt-5 d-flex flex-column" style="width: 170px;">
                     <img src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-como-a-presenca-da-mulher-pode-ser-harmonia-no-mundo.jpg"
                       alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                       style="width: 150px; z-index: 1">
-                    <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
-                      style="z-index: 1;">
-                      Edit profile
-                    </button>
+                  
                   </div>
                   <div class="ms-3" style="margin-top: 130px;">
-                    <h5>Maria Helena</h5>
+                    <h2>Maria Helena</h2>
                     <p>Jornalismo</p>
                   </div>
                 </div>
@@ -35,25 +32,39 @@
                     
                     <div class="px-3">
                       <p class="mb-1 h5">10</p>
-                      <p class="small text mb-0">Caronas</p>
+                      <p class="small text mb-2">Caronas</p>
                     </div>
-                    <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
-                      style="z-index: 1;">
-                      Edit profile
-                    </button>
+                   
                   </div>
                 </div>
                 <div class="card-body p-4 text-black">
                   <div class="mb-5">
                     <p class="lead fw-normal mb-1">Sobre</p>
                     <div class="p-4" style="background-color: #f8f9fa;">
-                      <p class="font-italic mb-1">Web Developer</p>
-                      <p class="font-italic mb-1">Lives in New York</p>
+                      <p class="font-italic mb-1">Gosto de musicas</p>
+                      <p class="font-italic mb-1"> Gosto de ler livros</p>
+                      <p class="font-italic mb-1"> Adoro viajar</p>
+                      <p class="font-italic mb-1"> Amo fazer amizades</p>
                     </div>
                   </div>
                                    
                   </div>
-                  
+                  <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                  style="z-index: 1;">
+                  Comentarios
+                </button>
+                    </div>
+                    <div class="card-body p-6 text-black">
+                    <div class="mb-5">
+                      <div class="ms-3" style="margin-top: -10px;"></div>
+                      
+                    <div class="p-6" style="background-color: whitesmoke;">
+                    <h6 class="font-italic mb-1">luiza martins</h6>
+                    <p class=> Otima passageira, tivemos otimas conversas na carona.</p>
+                    <h6 class="font-italic mb-1">Jorge Luis</h6> 
+                    <p class=> Muito bacana a viagem.</p>
+                    </div>
+                    </div>
                     </div>
                   </div>
                 </div>
