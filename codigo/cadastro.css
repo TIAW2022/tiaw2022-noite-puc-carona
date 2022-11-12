@@ -5,11 +5,8 @@ body{
     background-color: rgb(15, 150, 213);
 }
 .logo{
-    position: relative;
-    justify-content: left;
-    align-items: left;
-    justify-items: left;
-    align-items: left;
+ 
+    align-items: center;
 }
 body{
     min-height: 100vh;
@@ -31,7 +28,8 @@ body{
 
 }
 .user-input{
-    
+    text-align: center;
+
 }
 h2{
     font-weight: 600;
@@ -63,6 +61,15 @@ h3{
 .input-box{
     align-items: center;
     justify-items: end;
+}
+.span-required{
+    display: none;
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    display: none;
+    color:red;
+
+
 }
 form .input-field:first-child{
     margin-bottom: 1.2rem;
@@ -96,45 +103,6 @@ form input[type="submit"]:hover{
     align-items: center;
 }
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-
-}
-
-.footer span{
-    color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.footer .social-fields{
-    padding: 0.3rem;
-    font-size: 0.87rem;
-    border-radius:0.8px;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-text-align: center;}
-.footer .social-fields a i{
-    margin: 0 0.5rem;
-    width: 15px;
-}
-
-.footer .social-fields a{
-
-    text-decoration: none;
-    color: white;
-}
-
-.footer .social-fields.twitter{
-    background: linear-gradient(to right, #56a7f2, #468aca);
-}
-
-.footer .social-fields.facebook{
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-}
 
 .gender-group{
     margin-top: 0.7rem;
@@ -143,10 +111,14 @@ text-align: center;}
 }
 
 .user-agreement{
-    margin-top: 1.3rem;
+    margin-top: 3.8rem;
     margin-bottom: 2.8rem;
+    text-align: center;
 }
 
-.login-button{
+.form-submit-button{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 }
