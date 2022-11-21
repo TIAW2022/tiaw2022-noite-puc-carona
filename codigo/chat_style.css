@@ -34,11 +34,16 @@ body {
     border-radius: 20px 50px 0px 0px;
     width: 400px;
     height: 500px;
-    position: absolute;
+    /*position: absolute; antigo estilo
     bottom: 11px;
-    left: 85%;
+    left: 85%;*/
     margin:0 auto;
     transform: translate(-85%);
+    /*novo estilo*/
+    position: fixed;
+    z-index: 1000;
+    right: 10rem;
+    bottom: 0rem;
 }
 
 /* Cabeçalho */
