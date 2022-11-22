@@ -12,7 +12,7 @@ body {
 
 /* Configurações gerais do chat */
 .container_chat {
-    height: 700px;
+    height: 600px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -22,23 +22,18 @@ body {
     /*chat do projeto de interface*/
     border-radius: 20px 50px 0px 0px;
     width: 400px;
-    height: 600px;
+    height: 500px;
     position: absolute;
-    bottom: 0;
+    bottom: 52px;
     left: 50%;
     margin:0 auto;
-    top: 9%;
     transform: translate(-50%);
 }
 #conteudo_chat_copia { /*chat que vai ficar na pagina do gps*/
     border-radius: 20px 50px 0px 0px;
     width: 400px;
     height: 500px;
-    /*position: absolute; antigo estilo
-    bottom: 11px;
-    left: 85%;*/
     margin:0 auto;
-    transform: translate(-85%);
     /*novo estilo*/
     position: fixed;
     z-index: 1000;
@@ -256,7 +251,9 @@ footer a {
     }
     #conteudo_chat_copia {
         padding-bottom: 10%;
-        width: 100%;
+        width: 95%;
+        right: 0;
+        margin: 0 auto;
     }
     .conteudo_chat {
         right: 0;

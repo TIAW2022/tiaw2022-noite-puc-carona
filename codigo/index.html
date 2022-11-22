@@ -13,26 +13,49 @@
   </head>
 
   <body>
-    <header class="header">
-      <img src="Assets/logo2.png" width="75" />
-      <nav>
-        <ul class="menu">
-          <li><a href="Tela inicial">Tela inicial</a></li>
-          <li><a href="Sobre">Sobre</a></li>
-          <li><a href="Ajuda">Ajuda</a></li>
-          <li><a href="Sair">Sair</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div id="header" class="active">
+        <nav class="navbar navbar-expand-lg bg- justify-content-between" style="background-color: rgb(15,150, 213);">
+          <div class="container-fluid">
+    
+            <a class="navbar-brand" href="/codigo/telaprincipal.html">
+              <h2>PUC CARONA</h1>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="baixo">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active " id="txt-header" aria-current="page" href="/codigo/telaprincipal.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " id="txt-header" aria-current="page" href="/codigo/Perfil_publicohtml">PERFIL</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " id="txt-header" aria-current="page" href="#">SOBRE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " id="txt-header" aria-current="page" href="/codigo/login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                  </li>
+    
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
     <main class="container">
       <div class="title">
-        <h1>PUC CARONA</h1>
-        <img class="imagetitle" src="Assets/logo2.png" width="80" />
+        <img class="imagetitle" src="Assets/logo-nome.png" />
       </div>
-      <h2>Qual o seu destino</h2>
+      <h2 class="title-destino">Qual o seu destino?</h2>
 
       <form class="destino" action="endereço">
-        <input type="Destino" />
+        <input type="Destino" placeholder="" />
       </form>
 
       <picture>

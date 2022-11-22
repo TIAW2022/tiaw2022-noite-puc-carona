@@ -13,8 +13,6 @@ a{
   color: black;
 }
 
-
-
 .header{
   background-color:rgb(15,150, 213) ;
   display: flex;
@@ -33,16 +31,39 @@ a{
   align-items: center
 }
 .title{
-  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
   background:rgb(15,150, 213) ;
+  /* adicionando borda e padding*/
+  padding: 10px;
+  border-radius: 10px;
 }
 h1{
   font-weight: lighter;
   padding-right: 8px;
 }
+  /* adicionando h2(title destino), header, txt-header e hover + imagetitle*/
+.title-destino {
+  padding-top: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+#header {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#txt-header{
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#txt-header:hover{
+  color: rgb(15, 37, 88);
+}
+.imagetitle {
+  height: auto;
+  width: 20rem;
+
+}
+
 picture{margin-top: 24px;
   border: 10px solid #0f96d5;
 }
@@ -57,16 +78,3 @@ p{margin-top: 24px;}
   display: block;
   padding: 10px;
 }
-/*body{
-font-family: Arial, Helvetica, sans-serif;
-text-align: center;}
-  h1{
-    
-    font-size: 3.5em;
-    font-weight: lighter;
-    background-color: rgb(15,150, 213);
-}
-ul{
-  list-style: none;
-  display: flex;
- justify-content: space-around;}
