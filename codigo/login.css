@@ -1,133 +1,134 @@
 
-body{
-    background-color: rgb(15, 150, 213);
-}
-.logo{
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 1.2rem;
-    margin-left: 1.2rem;
-}
-body{
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+*{
+	justify-content: center;
 }
 
+.form-signin
+{
+    max-width: 330px;
+    padding: 35px;
+    margin: 0 auto;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+.container-header{
+    background-color: rgb(15, 150, 213) ;
+    margin-bottom: 20px;
+    max-height: 200px;
+}
 .container{
     justify-content: center;
     background-color: white;
-    max-width: 350px;
+    max-width: 900px;
     min-height: 40vh;
-    padding: 2rm;
+    padding: 2erm;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     margin-bottom: 10rem;
 
 }
-
-h2{
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    position: relative;
+.input-group{
+    width: auto;
+    height: auto;
+    font-family: verdana;
+}
+.header_area{
+    padding: 20px;
 }
 
-h2::before{
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 28px;
-    bottom: 1px;
-    left: 0;
-    border-radius: 8px;
-    background: rgb(15, 150, 213);
+.menu_area{
+    margin-top: 30px
 }
 
-h3{
-   
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-form{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-form .input-field:first-child{
-    margin-bottom: 1.2rem;
-}
-.input-field input{
-    position: relative;
-    font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-form input[type="submit"] {
-    margin-top: 2rem;
-    margin-bottom: 1.2rem;
-    padding: 0.4rem;
-    background: linear-gradient(to left, #4776E6, #8e54e9);
-    cursor: pointer;
-    color: azure;
-    font-size: 0.9rem;
-    font-weight: 300;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-form input[type="submit"]:hover{
-    letter-spacing: 0.4px;
-    background: linear-gradient(to right, #4776E6, #8e54e9);
-
-}
-.span-required{
-    display: none ;
-    font-size: 12px;
-    margin: 2px 0 0 1px;
-    color: red;
-}
-
-.footer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-
-}
-
-.footer span{
-    color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.footer .social-fields{
-    padding: 0.3rem;
-    font-size: 0.87rem;
-    border-radius:0.8px;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-text-align: center;}
-.footer .social-fields a i{
-    margin: 0 0.5rem;
-    width: 15px;
-}
-
-.footer .social-fields a{
-
-    text-decoration: none;
+.menu_area nav a{
     color: white;
+    justify-content: space-around;
 }
 
-.footer .social-fields.twitter{
-    background: linear-gradient(to right, #56a7f2, #468aca);
+.menu_area nav a:hover{
+    background-color: #13404e;
 }
-
-.footer .social-fields.facebook{
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+.logo{
+    width: 130px;
+    text-align: center;
+    padding-top: 15px;
+}
+.btn-outline-dark{
+    background-color: white;
+    margin: 0%;
+}
+.botao-pesquisa{
+    background-color: #494646;
+    color: white;
 }
