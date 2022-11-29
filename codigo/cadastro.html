@@ -1,288 +1,264 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUC Carona - Cadastro</title>
-    <script src="https://kit.fontawesome.com/4260c78e75.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="cadastro.css">
-
-    <div class="row">
-        <div class="col" class = "logo">
-            <img src="imagens/logo-nome.png" alt="logo" height="120" width="150">  
-        </div>  
-            
-    </div>
+	<title>PUC Carona - Cadastro</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 </head>
-
-
 <body>
-    
-    
+  <header class="container-header">
+    <div class="row">
 
-    <main class="container">
-    
-        <h2>Cadastre-se</h2>    
-
-        <input type="radio" name="q1" value="motorista">Sou motorista
-        <input type="radio" name="q1" value="paasageiro">Sou passageiro        
-
-        <form id="form" >
-
-            <div class="input-group">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="input-field">
-                            <label for="completename">Nome*</label>
-                            <input type="text" name="completename" id="completename" placeholder="Digite seu nome" class="required" autocomplete="off" oninput="nameValidate()">
-                            <span class="span-required">Seu nome não pode ter números!</span>
-                        </div>
-                        <div class="input-field">
-                            <label for="datanascimento">Nascimento*</label>
-                            <input type="date" name="datanascimento" id="datanascimento" placeholder="Digite sua data de nascimento" class="required" oninput="birthValidate()" >
-                            <span class="span-required">Deve ter no mínimo 18 anos!</span>
-                        </div>
-                        <div class="input-field">
-                            <label for="email">Email*</label>
-                            <input type="text" name="email" id="email" placeholder="Digite seu email" class="required" autocomplete="off" oninput="emailValidate()">
-                            <span class="span-required">Digite um e-mail válido!</span>
-                        </div>
-                        <div class="input-field">
-                            <label for="cpf">CPF*</label>
-                            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="required" autocomplete="off" oninput="">
-                            <span class="span-required">Digite um CPF válido!</span>
-                            <div class="underline"></div>
-                        </div>
-                        <div class="input-field">
-                            <label for="celular">Celular*</label>
-                            <input type="tel" name="celular" id="celular" placeholder="(xx) xxxxx-xxxx" class="required" autocomplete="off" oninput="phoneValidate()">
-                            <span class="span-required">Digite com os parenteses (xx)xxxxx-xxxx.</span>
-                            <div class="underline"></div>
-                        </div>
-                </div>
-            </div>
-
+        <div class="col-12 header_area">
             <div class="row">
-                <div class="col-6">
-                    <div class="input-field">
-                        <label for="numeropessoa">Número Pessoa*</label>
-                        <input type="number" name="numeropessoa" id="numeropessoa" placeholder="Digite seu número de pessoa" class="required" autocomplete="off" oninput="numeropessoaValidate()">
-                        <span class="span-required">Digite o número de pessoa</span>
-                        <div class="underline"></div>
-                    </div>
-                    <div class="input-field">
-                        <label for="cnh">CNH*</label>
-                        <input type="text" name="cnh" id="cnh" placeholder="Digite sua CNH" class="required" autocomplete="off" oninput="cnhvalidate()">
-                        <span class="span-required">Digite uma CNH válida</span>
-                        <div class="underline"></div>
-                    </div>
-                    <div class="input-field">
-                        <label for="placa">Placa Veículo*</label>
-                        <input type="tel" name="placa" id="placa" placeholder="Digite a placa do veículo" class="required" autocomplete="off" oninput="placaValidate()">
-                        <span class="span-required">Formato antigo (AAA1111) ou modelo Mercosul(AAA1A11)</span>
-                        <div class="underline"></div>
-                    </div>
-                    <div class="input-field">
-                        <label for="password">Senha*</label>
-                        <input type="password" name="password" id="password" placeholder="Digite sua senha" class="required" autocomplete="new-password" oninput="passwordValidate()">
-                        <span class="span-required">Deve ter no mínimo 8 caracteres!</span>
-                    </div>
-                    <div class="input-field">
-                        <label for="confirmpassword">Confirme sua senha*</label>
-                        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirme sua senha" class="required" autocomplete="new-password" oninput="confirmpasswordValidate()">
-                        <span class="span-required">Senhas não conferem!</span>
-                    </div>                
-            </div>
+                <div class="col-12 col-sm-2 col-md-7 col-lg-2"> 
+                    <img src="img/logo.png" class="logo">
+                </div>
+                <div class="col-12 col-sm-10 col-md-5 col-lg-10 menu_area">
+                <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">sobre nós</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">contato</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#"></a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#"></a>
+                    <div class="form-row align-items-center">
+          
+                </div>
+                  
+                </div>
+              </nav>
         </div>
 
-            <div class="gender-input">
-                <h5>Gênero (Opcional)</h5>
-                <input type="radio" id="gender1" name="genero"  value="homem">Homem
-                <input type="radio" id="gender2" name="genero"  value="mulher">Mulher
-                
-                <input type="radio" id="gender3" name="genero"  value="outros">Outros
-                
-                <input type="radio" id="gender4" name="genero" value="nao" >Prefiro não dizer
-                
-                
-            </div>    
+    </div>
+        
+   
+
+</header>
+
+<main class="container">
+
+    <form class="form-horizontal" id="form-cadastro">
+        <fieldset>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Cadastro de Usuário</div>
             
+            <div class="panel-body">
+        <div class="form-group">
+      
+        <div class="col-md-11 control-label">
+                <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
+        </div>
+
+        <label class="col-md-4 control-label" for="radios">Eu sou <h11>*</h11></label>
+          <div class="col-md-4"> 
+            <label required="" class="radio-inline" for="radios-0" >
+              <input name="sexo" id="motorista" value="motorista" onclick="display();" type="radio" required>
+              Motorista
+            </label> 
+            <label class="radio-inline" for="radios-1">
+              <input name="sexo" id="passageiro" value="passageiro" onclick="display();" type="radio">
+              Passageiro
+            </label>
+          </div>
+        </div>
+
+        
+        
+        <!-- Text input-->
+        <div class="form-group" >
+          <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>  
+          <div class="col-md-3">
+          <input id="Nome" name="Nome" placeholder="" class="form-control " required=""   type="text">
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="email">Email <h11>*</h11></label>
+     
+            <div class="col-md-3">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input id="email" name="email" class="form-control" placeholder="email@email.com"  required="" type="email" oninput="emailValidation();" pattern="" OnKeyPress="formatar('\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$', this)">
+               
+
+              </div>
+            </div>
+          </div>
+
+          <label class="col-md-2 control-label" for="senha">Senha <h11>*</h11></label>  
+          <div class="col-md-3">
+          <input id="senha" name="senha" placeholder="Mínimo 8 caracteres" class="form-control "  required="" type="text" minlength="8" oninput="passwordValidate()">
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="placa">Placa <h11>*</h11></label>  
+          <div class="col-md-3">
+          <input id="placa" name="placa" placeholder="" class="form-control " required="" type="text">
+          </div>
+        
+          <label class="col-md-2 control-label" for="cnh">CNH <h11>*</h11></label>  
+          <div class="col-md-3">
+          <input id="cnh" name="cnh" placeholder="" class="form-control " required="" type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="numeropessoa">Número Pessoa <h11>*</h11></label>  
+          <div class="col-md-3">
+          <input id="numeropessoa" name="numeropessoa" placeholder="" class="form-control " required="" type="text">
+          </div>
         </div>
         
-    </div>
-    <p>*Campos obrigatórios</p>
-
-</div>
-
-       
-            <a href="http://127.0.0.1:5500/login%20copy.html"><button type="submit" id="btn_submit" onclick="cadastroTrue();">Cadastrar</button></a>
-
-
-
-            <div class="underline">
-                <a href="http://127.0.0.1:5500/login%20copy.html">
-                    Ja é cadastrado? Faça login
-                </a>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="cpf">CPF <h11>*</h11></label>  
+          <div class="col-md-2">
+          <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control " required="" type="text" maxlength="11" pattern="[0-9]+$">
+          </div>
+          
+          <label class="col-md-2 control-label" for="Nome">Nascimento<h11>*</h11></label>  
+          <div class="col-md-2">
+          <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control  required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+        </div>
+        
+        <!-- Multiple Radios (inline) -->
+        
+          
+        </div>
+        
+        <!-- Prepended text-->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="prependedtext">Telefone <h11>*</h11></label>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+              <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" required="" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+              OnKeyPress="formatar('## #####-####', this)">
             </div>
+          </div>
+          
+            <label class="col-md-1 control-label" for="prependedtext">Telefone</label>
+             <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+              <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13"  pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+              OnKeyPress="formatar('## #####-####', this)">
+            </div>
+          </div>
+         </div> 
+        
+        <!-- Prepended text-->
+        
+        
+        
+        <!-- Search input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
+          <div class="col-md-2">
+            <input id="cep" name="cep" placeholder="Apenas números" class="form-control " required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+          </div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-primary" onclick="pesquisacep(cep.value)">Pesquisar</button>
+            </div>
+        </div>
+        
+        <!-- Prepended text-->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="prependedtext">Endereço</label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">Rua</span>
+              <input id="rua" name="rua" class="form-control" placeholder="" required="" readonly="readonly" type="text">
+            </div>
+            
+          </div>
+            <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">Nº <h11>*</h11></span>
+              <input id="numero" name="numero" class="form-control" placeholder="" required=""  type="text">
+            </div>
+            
+          </div>
+          
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon">Bairro</span>
+              <input id="bairro" name="bairro" class="form-control" placeholder="" required="" readonly="readonly" type="text">
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="prependedtext"></label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">Cidade</span>
+              <input id="cidade" name="cidade" class="form-control" placeholder="" required=""  readonly="readonly" type="text">
+            </div>
+            
+          </div>
+          
+           <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">Estado</span>
+              <input id="estado" name="estado" class="form-control" placeholder="" required=""  readonly="readonly" type="text">
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Select Basic -->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="genero">Sexo <h11>*</h11></label>
+          <div class="col-md-2">
+            <select required id="genero" name="genero" class="form-control">
+                <option value=""></option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+              <option value="Outros">Outros</option>
+              <option value="SemGenero">Prefiro não dizer</option>
+            </select>
+          </div>
+        
+          
+          
+          
+     
+          
     
+        <!-- Button (Double) -->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="Cadastrar"></label>
+          <div class="col-md-8" id="botoes">
+            <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+            <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+          </div>
+        </div>
+        
+        
+        </div>
+        <div class="row" id="politica">
+          <div class="col-12">
+            Ao realizar o cadastro, entendemos que você está de acordo com a nossa
+          <a href="politica.html" target="_blank">politica de privacidade.</a>
+          </div>
+        </div>   
+        </div>
+        
+        
+      </fieldset>
+        
         </form>
 
         
-           
+        
+      
     </main>
-<script>
-    window.onload = () => {
-        btn_submit.disabled = true;
-    }
-  
-    
-    const form   = document.getElementById('form');
-    const campos = document.querySelectorAll('.required');
-    const spans = document.querySelectorAll('.span-required');
-    const emailRegex  = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const phoneRegex = /([0-9]{2,3})?(\([0-9]{2}\))([0-9]{4,5})([0-9]{4})/;
-    const regexPlaca = /^[a-zA-Z]{3}[0-9]{4}$/;
-    const regexPlacaMercosulCarro = /^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$/;
-    const cnhRegex = /(?=.*\d)[A-Za-z0-9]{1,}/;
-
-    function setError(index){
-        campos[index].style.border = '2px solid #red';
-        spans[index].style.display = 'block';
-        btn_submit.disabled = true;
-
-    }
-
-    function removeError(index){
-        campos[index].style.border = '';
-        spans[index].style.display = 'none';
-        btn_submit.disabled = false;
         
-    }
-    
-    function cadastroTrue(){
-            alert("Cadastro realizado com sucesso!");
-            setTimeout(() =>{
-            windows.location.href = 
-            ("http://127.0.0.1:5500/login%20copy.html");
-        },3000);
 
-    
-
-
-    }
-
-   
-    function passwordValidate(){
-        if(campos[8].value.length < 8){
-            setError(8);
-        }
-        else{
-            removeError(8);
-        }
-    }
-    function emailValidate(){
-        if(emailRegex.test(campos[2].value)){
-            removeError(2);
-        }
-        else{
-            setError(2);
-        }
-
-    }
-    function nameValidate(){
-        var inputName = document.getElementById('completename').value;
-        completename.addEventListener("keypress", function(e){
-        var keyCode = (e.keyCode ? e.keyCode : e.which);
-            if(keyCode> 47 && keyCode < 58){
-                setError(0);
-            }
-            else{
-                removeError(0);
-            }
-
-        });
-        }
-   
-    function birthValidate(){
-        var data = document.getElementById('datanascimento').value; 
-        data = data.replace(/\//g, "-"); 
-        var data_array = data.split("-"); 
-   
-        
-        var hoje = new Date();
-        var nasc  = new Date(data);
-        var idade = hoje.getFullYear() - nasc.getFullYear();
-        var m = hoje.getMonth() - nasc.getMonth();
-        if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
-   
-        if(idade < 18){
-            setError(1);
-        }
-        else{
-            removeError(1);
-        }
-    }
-
-    function phoneValidate(){
-            if(phoneRegex.test(campos[4].value)){
-                removeError(4);
-
-            }
-            else{
-                setError(4);
-            }
-        }
-
-    function confirmpasswordValidate(){
-        if(campos[8].value == campos[9].value){
-            removeError(9);
-        }
-        else {
-            setError(9);
-        }
-    }
-
-
-    function placaValidate(){
-        if(regexPlaca.test(campos[7].value) || regexPlacaMercosulCarro.test(campos[7].value)){
-            removeError(7);
-        }
-        else{
-            setError(7);
-        }
-    }
-
-    function cnhvalidate(){
-       
-        if(campos[6].value.length < 11){
-            setError(6);
-        }
-        else{
-            removeError(6);
-        }
-
-    }
-
-    function numeropessoaValidate(){
-        if(campos[5].value.length == 0){
-            setError(5);
-        }
-        else{
-            removeError(5);
-        }
-
-    }
-
-   
-   
-
-        
-    
-
-
-</script>
-<script src="app3.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
