@@ -1,136 +1,71 @@
-body{
-    background-color: rgb(15, 150, 213);
+h11 {
+    color:red;
+}
+
+
+
+.panel-heading{
+    font-size:150%;
+}
+
+.btn-success {
+   margin-left: 27%;
+   margin-top: 3%;
+}
+
+.btn-danger {
+    margin-left: auto;
+    margin-top: 3%;
+}
+
+*{
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container-header{
+    background-color: rgb(15, 150, 213) ;
+    margin-bottom: 20px;
+    max-height: 200px;
+}
+
+.input-group{
+    width: auto;
+    height: auto;
+    font-family: verdana;
+}
+.header_area{
+    padding: 20px;
+}
+
+.menu_area{
+    margin-top: 30px
+}
+
+.menu_area nav a{
+    color: white;
+    align-content: space-between;
+}
+
+.menu_area nav a:hover{
+    background-color: #13404e;
 }
 .logo{
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 1.2rem;
-    margin-left: 1.2rem;
-}
-body{
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container{
-    justify-content: center;
+    width: 130px;
+    position: relative;
+    padding-top: 15px;}
+.btn-outline-dark{
     background-color: white;
-    max-width: 600px;
-    min-height: 70vh;
-    padding: 2rm;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    margin-bottom: 10rem;
-
+    margin: 0%;
 }
-
-h2{
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    position: relative;
-}
-
-h2::before{
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 28px;
-    bottom: 1px;
-    left: 0;
-    border-radius: 8px;
-    background: rgb(15, 150, 213);
-}
-
-h3{
-   
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-form{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-form .input-field:first-child{
-    margin-top: 1.2rem;
-}
-form .input-field:last-child{
-    margin-bottom: 3.2rem;
-}
-.input-field input{
-    position: relative;
-    font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-
-#btn_submit {
-    margin-top: 2rem;
-    margin-bottom: 1.2rem;
-    padding: 0.4rem;
-    background: linear-gradient(to left, #4776E6, #8e54e9);
-    cursor: pointer;
-    color: azure;
-    font-size: 0.9rem;
-    font-weight: 300;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-#btn_submit:hover{
-    letter-spacing: 0.4px;
-    background: linear-gradient(to right, #4776E6, #8e54e9);
-
-}
-.span-required{
-    display: none ;
-    font-size: 12px;
-    margin: 2px 0 0 1px;
-    color: red;
-}
-
-.footer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-
-}
-
-.footer span{
-    color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.footer .social-fields{
-    padding: 0.3rem;
-    font-size: 0.87rem;
-    border-radius:0.8px;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-text-align: center;}
-.footer .social-fields a i{
-    margin: 0 0.5rem;
-    width: 15px;
-}
-
-.footer .social-fields a{
-
-    text-decoration: none;
+.botao-pesquisa{
+    background-color: #494646;
     color: white;
 }
-
-.footer .social-fields.twitter{
-    background: linear-gradient(to right, #56a7f2, #468aca);
+#politica{
+    text-align: center;
 }
-
-.footer .social-fields.facebook{
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+#botoes{
+   
+    text-align: center;
+    
 }
