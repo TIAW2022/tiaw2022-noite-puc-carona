@@ -105,7 +105,6 @@ cadastrar.addEventListener('click', (event)=> {
 
 } )
 
-
 function entrar () {
    let cadastrar = document.querySelector("#cadastrar") 
    let usuario = document.getElementById('email')
@@ -126,7 +125,7 @@ function entrar () {
             }
 
             alert("Login realizado com sucesso")
-            
+            login = true;
     
         }
         

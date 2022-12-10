@@ -83,36 +83,5 @@ BR!2sbr!4v1667166775167!5m2!1spt-BR!2sbr"
     </main>
   </body>
 
-  <script> 
-    //Puxa a div da pagina do chat.
-    var http = new XMLHttpRequest();
-    var url_ = "chat_index.html"; // página de onde virá a div
-    http.open("GET", url_, true);
-    http.onreadystatechange = function(){
-        if(http.readyState == 4){
-            var html = http.responseText;
-            // converte o retorno em elementos HTML
-            html = new DOMParser().parseFromString(html, "text/html");
-            document.getElementById('conteudo_chat_copia').innerHTML = html.getElementById('conteudo_chat_original').innerHTML.trim();
-        } //pega a div dessa pagina e recebe de outra div;
-    }
-        http.send(null);
-
-    //Controlo o chat fechado e o chat aberto.
-    var visibilidade=true;
-    function ocultarExibir()    {
-        if(visibilidade) { //se for true
-            document.getElementById("cabecalho_id").style.display="none"; //cabecalho normal some
-            document.getElementById("conteudo_mensagens_id").style.display="none"; //conteudo some
-            document.getElementById("cabecalho_minimizado_id").style.display="block"; //cabecalho minimizado aparece
-            visibilidade = false;
-        }   else { //se for false
-            document.getElementById("cabecalho_id").style.display="block"; //cabecalho normal aparece
-            document.getElementById("cabecalho_minimizado_id").style.display="none"; //cabecalho minimizado some
-            document.getElementById("conteudo_mensagens_id").style.display="block"; //conteudo aparece
-            visibilidade = true;
-        }
-    }
-</script>
 
 </html>
