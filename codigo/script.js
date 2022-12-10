@@ -125,7 +125,12 @@ function entrar () {
             }
 
             alert("Login realizado com sucesso")
-            login = true;
+            let login = {                               //mudança feita pelo artur
+                value:"true",                          //mudança feita pelo artur
+                email:`${listaUser.item.emailCad}`,      //mudança feita pelo artur
+            };
+            sessionStorage.setItem("login", JSON.stringify(login));    //mudança feita pelo artur
+
     
         }
         
