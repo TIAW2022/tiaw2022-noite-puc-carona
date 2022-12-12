@@ -1,6 +1,52 @@
 h11 {
     color:red;
 }
+@media (max-width:991.98px) {
+    #header .baixo {
+        width: 100%;
+    }
+}
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 5%;
+}
+
+#header {
+    width: 100%;
+    background-color: #1875a0;
+}
+
+#header.active {
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+.nav-item {
+    font-size: larger;
+    font-weight: bolder;
+}
 
 
 
@@ -22,45 +68,14 @@ h11 {
     font-size: 12pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.container-header{
-    background-color: rgb(15, 150, 213) ;
-    margin-bottom: 20px;
-    max-height: 200px;
-}
+
 
 .input-group{
     width: auto;
     height: auto;
     font-family: verdana;
 }
-.header_area{
-    padding: 20px;
-}
 
-.menu_area{
-    margin-top: 30px
-}
-
-.menu_area nav a{
-    color: white;
-    align-content: space-between;
-}
-
-.menu_area nav a:hover{
-    background-color: #13404e;
-}
-.logo{
-    width: 130px;
-    position: relative;
-    padding-top: 15px;}
-.btn-outline-dark{
-    background-color: white;
-    margin: 0%;
-}
-.botao-pesquisa{
-    background-color: #494646;
-    color: white;
-}
 #politica{
     text-align: center;
 }
