@@ -44,7 +44,7 @@ justify-content: center;
 }
 
 .active{
-    background-color:rgb(15, 150, 213); !important;
+    background-color:rgb(66, 115, 184); !important;
 }
 
 
@@ -54,7 +54,7 @@ background-color:rgb(255, 255, 255);
 }
 
 .footer{
-    background-color:rgb(15, 150, 213);
+    background-color:rgb(66, 115, 184);
     margin-top: 20px;
     color: white;
 
@@ -95,7 +95,7 @@ background-color:rgb(255, 255, 255);
 }
 
 .nav-link {
-    color: white !important;
+    color: rgb(248, 242, 242) !important;
     font-weight: bold;
 }
 
