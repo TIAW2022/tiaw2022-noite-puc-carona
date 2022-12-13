@@ -1,0 +1,71 @@
+h11 {
+    color:red;
+}
+
+
+
+.panel-heading{
+    font-size:150%;
+}
+
+.btn-success {
+   margin-left: 27%;
+   margin-top: 3%;
+}
+
+.btn-danger {
+    margin-left: auto;
+    margin-top: 3%;
+}
+
+*{
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container-header{
+    background-color: rgb(15, 150, 213) ;
+    margin-bottom: 20px;
+    max-height: 200px;
+}
+
+.input-group{
+    width: auto;
+    height: auto;
+    font-family: verdana;
+}
+.header_area{
+    padding: 20px;
+}
+
+.menu_area{
+    margin-top: 30px
+}
+
+.menu_area nav a{
+    color: white;
+    align-content: space-between;
+}
+
+.menu_area nav a:hover{
+    background-color: #13404e;
+}
+.logo{
+    width: 130px;
+    position: relative;
+    padding-top: 15px;}
+.btn-outline-dark{
+    background-color: white;
+    margin: 0%;
+}
+.botao-pesquisa{
+    background-color: #494646;
+    color: white;
+}
+#politica{
+    text-align: center;
+}
+#botoes{
+   
+    text-align: center;
+    
+}

@@ -1,0 +1,86 @@
+h11 {
+    color:red;
+}
+@media (max-width:991.98px) {
+    #header .baixo {
+        width: 100%;
+    }
+}
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 5%;
+}
+
+#header {
+    width: 100%;
+    background-color: #1875a0;
+}
+
+#header.active {
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+.nav-item {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+
+.panel-heading{
+    font-size:150%;
+}
+
+.btn-success {
+   margin-left: 27%;
+   margin-top: 3%;
+}
+
+.btn-danger {
+    margin-left: auto;
+    margin-top: 3%;
+}
+
+*{
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.input-group{
+    width: auto;
+    height: auto;
+    font-family: verdana;
+}
+
+#politica{
+    text-align: center;
+}
+#botoes{
+   
+    text-align: center;
+    
+}

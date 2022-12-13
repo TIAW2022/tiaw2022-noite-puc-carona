@@ -1,0 +1,77 @@
+body{
+    padding: 5px;
+    background-color: rgb(15, 150, 213) !important ;
+}
+.header{
+margin-top: 0%;
+padding: 0%;
+
+}
+
+.form-gap {
+    padding: 10px;
+    width: 50%;
+}
+
+main {
+   background-color: rgb(15, 150, 213);
+   padding: 12%; 
+  
+   
+
+}
+
+.container{
+
+ margin:-1%;
+   
+
+}
+
+/* HEADER */
+@media (max-width:991.98px) {
+    #header .baixo {
+        width: 100%;
+    }
+}
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 5%;
+}
+
+#header {
+    width: 100%;
+    background-color: #1875a0;
+}
+
+#header.active {
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+.nav-item {
+    font-size: larger;
+    font-weight: bolder;
+}

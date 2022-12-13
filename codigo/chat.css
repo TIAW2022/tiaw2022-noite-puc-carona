@@ -1,0 +1,204 @@
+/* Para todo site */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: #b8d8e7;
+}
+main {
+    position: relative;
+    height: calc(100vh - 115px) !important;
+}
+
+/* HEADER */
+@media (max-width:991.98px) {
+    #header .baixo {
+        width: 100%;
+    }
+}
+
+.navbar-toggler {
+    border-color: #222222;
+}
+
+.toggler-icon {
+    color: white;
+}
+
+.logo {
+    padding-left: 5%;
+}
+
+#header {
+    width: 100%;
+    background-color: #1875a0;
+}
+
+#header.active {
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+.nav-item {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+/* CHAT */
+#container {
+    background-color: rgb(162, 196, 228, 10);
+    height: 80vh;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 2px 5px 0px ;
+    bottom: 0;
+
+}
+    #chat {
+        position: relative;
+        width: 100%;
+    }
+
+#chat-header {
+    background: rgb(15, 150, 213);
+    box-shadow: 0px 2px 5px 0px ;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 10;
+    flex-grow: 0;
+    flex-basis: auto;
+    height: 75px;
+}
+    .profile-pic {
+        border-radius: 50%;
+        position: relative;
+        left: 10%;
+        top: 10%;
+    }
+    .name {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+    .about {
+        color: rgb(87, 84, 84);
+    }
+
+#chat-conteudoMensagens {
+    z-index: 10;
+    width: auto;
+    background-color: rgb(229, 231, 238);
+    overflow: auto;
+    height: calc(80vh - 75px) !important;
+}
+    .caixa-de-mensagens {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+    }
+    .message {  /* Todas as mensagens*/
+        margin: 10px;
+        width: fit-content;
+        background-color: rgb(82, 149, 197);
+        padding: 3px 10px 3px 10px;
+        border-radius: 4px;
+        margin-top: 6%;
+        margin-bottom: 6%;
+        color: rgb(33, 18, 18);
+        font-weight: 2px;
+        box-shadow: 1px 1px 10px rgb(125, 123, 123);
+    }
+    .user_message {  /*muda apenas a do usuario*/
+        margin-left: auto;
+        background-color: rgb(135, 174, 241);
+    }
+
+#chat-caixaEnvio {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    height: 40px;
+}
+    .form-chat {  
+        display: flex;
+        justify-content: center;
+    }
+    .input-chat {
+        width: 350px;
+        outline: none;
+        border-radius: 10px 0px 0px 0px;
+        border: 2px solid rgb(97, 97, 154);
+    }
+    form button {
+        margin-left: 1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(15, 150, 213);
+        color: rgb(23, 17, 17);
+        border: 2px solid rgb(97, 97, 154);
+    }
+
+/* FOOTER */
+.footer-chat {
+    color: white;
+    background: rgb(7, 126, 182);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding:10px;
+    height: 42px;
+    margin: 50px solid rgb(17, 17, 22);
+    text-align: center;
+}
+    footer a {
+        font-style: normal;
+        color: rgb(255, 255, 255);
+    }
+
+/* Responsivo */
+@media (max-width: 576px) {
+    #container {
+        margin-top: 10px;
+        background-color: rgb(162, 196, 228, 10);
+        height: 80vh;
+        width: 95% !important;
+        position: block !important;
+        left: 2.5% !important;
+        transform: none !important;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: none !important ;
+    }
+    #chat-header > .row {
+        --bs-gutter-x:none;
+    }
+    .col-10 {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+    .col-2 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
