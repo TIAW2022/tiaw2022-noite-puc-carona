@@ -5,7 +5,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Artur Marcos da Silva
+* Artur Marcos
 * Alex Gonçalves Diniz
 * Pablo Lorran
 * Maria Caroline
