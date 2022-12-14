@@ -1,31 +1,12 @@
-body{
-    padding: 5px;
-    background-color: rgb(15, 150, 213) !important ;
-}
-.header{
-margin-top: 0%;
-padding: 0%;
 
-}
-
-.form-gap {
-    padding: 10px;
-    width: 50%;
-}
-
-main {
-   background-color: rgb(15, 150, 213);
-   padding: 12%; 
-  
-   
-
-}
-
-.container{
-
- margin:-1%;
-   
-
+    body{
+   position: relative;
+   border-radius: 50px;
+   font-size: 10px;
+    background: #b8d8e7 !important;
+    }
+.comments {
+    padding: 20px 5px 5px 5px;
 }
 
 /* HEADER */
@@ -59,7 +40,7 @@ main {
 }
 
 .nav-link {
-    color: white;
+    color: white !important;
     font-weight: bold;
 }
 

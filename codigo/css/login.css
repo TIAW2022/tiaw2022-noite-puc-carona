@@ -1,3 +1,4 @@
+
 *{
 	justify-content: center;
 }
@@ -81,53 +82,58 @@ text-align: center;
     display: block;
     margin-top: 10px;
 }
-.container-header{
-    background-color: rgb(15, 150, 213) ;
-    margin-bottom: 20px;
-    max-height: 200px;
-}
-.container{
-    justify-content: center;
-    background-color: white;
-    max-width: 900px;
-    min-height: 40vh;
-    padding: 2erm;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    margin-bottom: 10rem;
 
-}
+
 .input-group{
     width: auto;
     height: auto;
     font-family: verdana;
 }
-.header_area{
-    padding: 20px;
+
+/* HEADER */
+@media (max-width:991.98px) {
+    #header .baixo {
+        width: 100%;
+    }
 }
 
-.menu_area{
-    margin-top: 30px
+.navbar-toggler {
+    border-color: #222222;
 }
 
-.menu_area nav a{
+.toggler-icon {
     color: white;
-    justify-content: space-around;
 }
 
-.menu_area nav a:hover{
-    background-color: #13404e;
+.logo {
+    padding-left: 5%;
 }
-.logo{
-    width: 130px;
-    text-align: center;
-    padding-top: 15px;
+
+#header {
+    width: 100%;
+    background-color: #1875a0;
 }
-.btn-outline-dark{
-    background-color: white;
-    margin: 0%;
+
+#header.active {
+    z-index: 9999;
+    box-shadow: 5px 4px 10px black;
+    
 }
-.botao-pesquisa{
-    background-color: #494646;
+
+.nav-link {
     color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: rgb(66, 115, 184);
+    text-shadow: 2px 2px 3px rgb(10, 36, 73);
+}
+
+.navbar ul li {
+    text-shadow: 2px 1px 3px rgb(10, 36, 73);
+}
+.nav-item {
+    font-size: larger;
+    font-weight: bolder;
 }

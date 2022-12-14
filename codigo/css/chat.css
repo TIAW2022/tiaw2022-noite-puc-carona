@@ -175,6 +175,7 @@ main {
     footer a {
         font-style: normal;
         color: rgb(255, 255, 255);
+        text-decoration: none;
     }
 
 /* Responsivo */
