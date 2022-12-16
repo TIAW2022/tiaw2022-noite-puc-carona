@@ -119,8 +119,6 @@ let login = {
     } else { // nao tem usuario logado -> levar p/ login
       console.log("Usuario quer fazer login")
       window.location.href = "/codigo/login.html";
-  
-  
     }
   }
   
