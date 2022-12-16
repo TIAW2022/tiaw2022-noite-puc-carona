@@ -1,6 +1,6 @@
 
 let login = {
-  value: "false",
+  value: "true",
   email: "artur",
 };
 sessionStorage.setItem("login", JSON.stringify(login));
