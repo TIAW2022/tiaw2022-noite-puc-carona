@@ -5,83 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/354216b200.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="imagem/png" href="Assets/logo.png"/>
+    <script
+      src="https://kit.fontawesome.com/354216b200.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="carona-style.css" />
+    <link rel="icon" type="imagem/png" href="Assets/logo.png" />
+  
+     </script>
 
-    <title>PUC CARONA</title>
-  </head>
-
-  <body>
-      <div id="header" class="active">
-        <nav class="navbar navbar-expand-lg bg- justify-content-between" style="background-color: rgb(15,150, 213);">
-          <div class="container-fluid">
-    
-            <a class="navbar-brand" href="/codigo/telaprincipal.html">
-              <h2>PUC CARONA</h1>
-            </a>
-    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="baixo">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active " id="txt-header" aria-current="page" href="/codigo/telaprincipal.html">INICIO</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active " id="txt-header" aria-current="page" href="/codigo/Perfil_publicohtml">PERFIL</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active " id="txt-header" aria-current="page" href="#">SOBRE</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active " id="txt-header" aria-current="page" href="/codigo/login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-                  </li>
-    
-                </ul>
-              </div>
+    <title>Solicitação de Carona</title>
+    <div id="header" class="active">
+      <nav class="navbar navbar-expand-lg bg- justify-content-between">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">
+            <img
+              src="Assets/logo-nome.png"
+              class="logo"
+              alt="Bootstrap"
+              width="160"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="baixo">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="/codigo/telaprincipal.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="/codigo/index.html"
+                    >Chat</a
+                  >
+                </li>
+                <li class="nav-item" >
+                  <a 
+                    class="nav-link"
+                    aria-current="page"
+                    href="/codigo/telaprincipal.html"
+                    >Logout</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><i class="fa-solid fa-gear"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
           </div>
-        </nav>
-      </div>
-
-    <main class="container">
-      <div class="title">
-        <img class="imagetitle" src="Assets/logo-nome.png" />
-      </div>
-      <h2 class="title-destino">Qual o seu destino?</h2>
-
-      <form class="destino" action="endereço">
-        <input type="Destino" placeholder="" />
-      </form>
-
-      <picture>
+        </div>
+      </nav>
+    </div>
+  </head>
+  <body>
+ 
+    <center>
+      <div>
+        <button id="clicker" value="gpsOn"><h1 id="Busca">Buscar Carona</h1></button>
+          
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.540164199219!2d-43.9211193845494!3d-19.859400441247455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69ac3c5437e8f%3A0xaf89be1db1ea54e6!2sPUC%20Minas%20S%C3%A3o%20Gabriel!5e0!3m2!1spt-
-BR!2sbr!4v1667166775167!5m2!1spt-BR!2sbr"
-          width="550"
+          id="gpsOn"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.5400445289206!2d-43.9189307!3d-19.859405499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69ac3c5437e8f%3A0xaf89be1db1ea54e6!2sPUC%20Minas%20S%C3%A3o%20Gabriel!5e0!3m2!1spt-BR!2sbr!4v1671200399065!5m2!1spt-BR!2sbr"
+
           height="450"
           style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </center>
+    <footer class="footer-chat">
+      <!-- Footer -->
+      <div class="footer">
+        © 2022 Copyright:
+        <a class="texto-footer" href="/codigo/html/termos-de-uso.html"
+          >Puc Carona</a
         >
-        </iframe>
-      </picture>
-
-      <p>PUC MINAS 2022</p>
-
-      <!-- Div para receber o chat importado --> 
-    <div class="container_chat">
-      <div id="conteudo_chat_copia"> </div>
-    </div>
-      <!--   Fim chat div --> 
-
-    </main>
+      </div>
+    </footer>
+    <script type =text/javascript src="js/gps.js" ></script>
   </body>
-
-
 </html>
+
