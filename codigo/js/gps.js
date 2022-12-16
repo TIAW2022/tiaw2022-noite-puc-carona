@@ -13,3 +13,35 @@ btn.onclick = function () {
     btn.innerHTML = "<h1>Buscar Carona</h1>";
   }
 };
+
+//temp para login ser true
+let login = {
+  value: "true",
+  email: "a@mail",
+};
+sessionStorage.setItem("login", JSON.stringify(login));
+
+
+function logout () {
+  alert("Deslogado com sucesso...");
+
+  let login = {
+    value: "false",
+    email: "",
+  };
+  sessionStorage.setItem("login", JSON.stringify(login));
+  let loginSTR = sessionStorage.getItem("login");
+
+  window.location.href = "./index.html";
+}
+
+ function verificaLogin() {
+  let loginSTR = sessionStorage.getItem("login");
+  let loginOBJ = JSON.parse(loginSTR);
+
+  if (loginOBJ.value != "true") {
+    console.log("Não há usuario logado.")
+    alert("Usuario não tem permissão para acessar essa pagina...");
+    window.location.href = "./login.html";
+  }
+ }

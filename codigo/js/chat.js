@@ -1,6 +1,6 @@
 
 let login = {
-  value: "true",
+  value: "false",
   email: "artur",
 };
 sessionStorage.setItem("login", JSON.stringify(login));
@@ -62,8 +62,9 @@ document.querySelector(".click").addEventListener("click", (event) => {
 });
 
 // Display the existing messages when the page loads
+if(loginOBJ.value == "true") {
 displayMessages();
-
+}
 
 function logout () {
   alert("Deslogado com sucesso...");
@@ -74,7 +75,6 @@ function logout () {
   };
   sessionStorage.setItem("login", JSON.stringify(login));
   let loginSTR = sessionStorage.getItem("login");
-  let loginOBJ = JSON.parse(loginSTR);
 
   window.location.href = "./index.html";
 }
@@ -83,7 +83,7 @@ function logout () {
   let loginSTR = sessionStorage.getItem("login");
   let loginOBJ = JSON.parse(loginSTR);
 
-  if (loginOBJ.value == "false") {
+  if (loginOBJ.value != "true") {
     console.log("Não há usuario logado.")
     alert("Usuario não tem permissão para acessar essa pagina...");
     window.location.href = "./login.html";
