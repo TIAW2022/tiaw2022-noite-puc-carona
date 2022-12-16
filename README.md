@@ -5,7 +5,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* Artur Marcos da Silva
+* Artur Marcos
 * Alex Gonçalves Diniz
 * Pablo Lorran
 * Maria Caroline
@@ -13,10 +13,10 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
-* Caroline
+* Caroline Rhaian
 
 ## Quadro de tarefas
-Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
+https://trello.com/b/iyErPWUD/gest%C3%A3o-de-projetos
 
 ## Instruções para uso
-Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
+Para acessar a pagina inicial, basta abrir a pasta codigo, entrar na pasta html e abrir o arquivo "index.html"
