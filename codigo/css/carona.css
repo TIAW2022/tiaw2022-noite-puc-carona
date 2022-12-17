@@ -59,25 +59,9 @@ main {
     font-size: larger;
     font-weight: bolder;
 }
-.footer-chat {
-    color: white;
-    background: rgb(7, 126, 182);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding:10px;
-    height: 42px;
-    margin: 50px solid rgb(17, 17, 22);
-    text-align: center;
-}
-    footer a {
-        font-style: normal;
-        color: rgb(255, 255, 255);
-    }
     div {
         text-align: center;
+        
     }
     button{ background-color: #1875a0;
         color: rgb(255, 255, 255);
@@ -100,18 +84,36 @@ main {
         color: rgb(66, 115, 184);
     text-shadow: 2px 2px 3px rgb(10, 36, 73);
     }
+   
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu-menu{
+        border: 1px solid  rgb(7, 126, 182);
+        border-radius: 3px;
+        background-color: azure;
+        box-shadow:2px 2px 2px 2px  rgb(0, 0, 0);
+        position:absolute;
+        margin-top: 15%;
+        margin-left: 8px;
+        margin-right: 8px;
+    
+    }
+    li{
+        padding: 0.2em 0.4em;
+        cursor: pointer;
+    }
+    
     iframe{
         margin-top: 24px;
         width: 90%;
         box-shadow: 4px 4px 8px 8px black;
-      align-items: center;
         border-radius: 8px;
-        position: relative;
+        position: flex;
         align-content: center;
         height:450
-
-       
-        
     }
     /* FOOTER */
 .footer-chat {
@@ -126,12 +128,11 @@ main {
     text-align: center;
     position:static;
     margin-top: 1.12cm;
-
-    
     
 }
-    footer a {
-        font-style: normal;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
+footer a {
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+
