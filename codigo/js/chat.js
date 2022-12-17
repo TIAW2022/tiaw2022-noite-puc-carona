@@ -1,92 +1,88 @@
 let login = {
   value: "true",
-  email: "artur",
+  email: "art",
 };
 sessionStorage.setItem("login", JSON.stringify(login));
 let loginSTR = sessionStorage.getItem("login");
 let loginOBJ = JSON.parse(loginSTR);
 
-
-
-var message= new Object();
+var message = new Object();
 
 function salvaMensagens(message) {
   const messages = JSON.parse(localStorage.getItem('messages')) || [];
-
-  messages.push(message);
-
-  localStorage.setItem('messages', JSON.stringify(messages));
+    messages.push(message);
+      localStorage.setItem('messages', JSON.stringify(messages));
 }
 
-function mostraMensagens() {
-  // Pega mensagens do storage
+function mostraMensagens() {  // Pega mensagens do storage
   const messages = JSON.parse(localStorage.getItem('messages')) || [];
 
   let divChat = '';
-  for (let i=0; i<messages.length;i++)  {
+    for (let i = 0; i < messages.length; i++) {
       let allmsg = messages[i];
-      if(login.email == allmsg.email) {
-          divChat += `<p class="message user_message">${allmsg.conteudo}</p>`
-
-      } else  {
-        divChat += `<p class="message other-user_message">${allmsg.conteudo}</p>`
+      if (login.email == allmsg.email) {
+        divChat += `<p class="message user_message">${allmsg.conteudo}</p>`
       }
-  }
+      if (login.email != allmsg.email) {
+        divChat += `<p class="message other-user_message">${allmsg.conteudo}</p>`
+
+      }
+    }
+
   document.getElementById('chat-conteudoMensagens').innerHTML = divChat;
-  console.log(messages);
-  
 }
 
-// Listen for form submit events and save the new message when the form is submitted
-document.querySelector(".click").addEventListener("click", (event) => {
-  // Prevent the default form submission behavior
+document.querySelector(".click").addEventListener("click", (event) => { //escuta o envio e armazena o valor
   event.preventDefault();
-
-  message.email =  (login.email);
-  message.conteudo = document.querySelector(".input-chat").value;
-  if(message.conteudo == "") {
-    message.conteudo = "👋😃"
-  }
-  console.log(message)
-  window.location.reload();
-  salvaMensagens(message);
+    message.email = (login.email);
+    message.conteudo = document.querySelector(".input-chat").value;
+    if (message.conteudo == "") {
+      message.conteudo = "👋😃"
+    }
+    window.location.reload(); //recarrega a pagina pra mostrar a mensagem enviada;
+      salvaMensagens(message);
 });
 
-// mostra mensagens que existem 
-if(loginOBJ.value == "true") {
-mostraMensagens();
+if (loginOBJ.value == "true") {
+  mostraMensagens(); //chama a function apenas se tiver logado
 }
 
-function logout () {
+function logout() {
   alert("Deslogado com sucesso...");
-//limpa dados de login
   let login = {
     value: "false",
     email: "",
   };
-  sessionStorage.setItem("login", JSON.stringify(login));
-//limpa dados de permissao
+    sessionStorage.setItem("login", JSON.stringify(login));   //limpa dados de login
+
   let permissao = {
     value: "false"
   };
-  sessionStorage.setItem("permissao", JSON.stringify(permissao));
-//limpa dados de chat
-  localStorage.setItem("messages", JSON.stringify(""));
+    sessionStorage.setItem("permissao", JSON.stringify(permissao));   //limpa dados de permissao
 
+  localStorage.setItem("messages", JSON.stringify(""));  //limpa dados de chat
 
-  window.location.href = "./index.html";
+    window.location.href = "./index.html";
 }
 
 function verificaLogin() {
   let permissaoSTR = sessionStorage.getItem("permissao");
-  let permissao = JSON.parse(permissaoSTR);
-  console.log(permissao.value)
+  let permissao = JSON.parse(permissaoSTR); 
 
-  if (permissao.value == "true") {
-    console.log("Há usuario logado.") //mostra o chat 
+  let loginSTR = sessionStorage.getItem("login"); 
+  let loginOBJ = JSON.parse(loginSTR);
+
+  if (loginOBJ.value != "true") { //verifica se a pessao está logada.
+    console.log("Não há usuario logado.")
+    alert("Usuario não tem permissão para acessar essa pagina...");
+    window.location.href = "./login.html";
+  }
+
+  if (permissao.value == "true") {  //verifica se a pessoa pediu carona
+    console.log("usuario pediu carona.") 
   } else if (permissao.value == "false") {
-    console.log("Usuario não escolheu o mapa.") //nao mostra o chat, mas volta pro mapa
+    console.log("Usuario não pediu carona.") 
     alert("Você precisa buscar uma carona primeiro...");
     window.location.href = "./carona.html";
   }
- }
+}
