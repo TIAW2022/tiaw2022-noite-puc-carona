@@ -6,12 +6,23 @@ let permissao = {
 };
 sessionStorage.setItem("permissao", JSON.stringify(permissao));
 
-
-let login = {
-  value: "true",
-  email: "artur", //temporario até fazer login no pablo
-};
-
+  //usuario real 
+  let login = {                              
+    value:"true",                         
+    email:`artur@`,      
+    nome:`Artur `,
+    placa:`1111`,
+  };
+  sessionStorage.setItem("login", JSON.stringify(login));
+  //conecta o usuario com um "fake";
+    var loginFake = {                              
+      value:"true",    
+      email:`polia@gmail.com`,                           
+      nome:`Poliana Mendes`,
+      placa:`PX314J`,
+      foto:"https://midias.correiobraziliense.com.br/_midias/jpg/2022/05/20/poliana_moca-25696303.jpg"
+    };
+    sessionStorage.setItem("loginFake", JSON.stringify(loginFake));
 
 btn.onclick = function () {
   if (btn.value === "gpsOn") {

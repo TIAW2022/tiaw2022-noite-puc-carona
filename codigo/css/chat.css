@@ -88,10 +88,15 @@ main {
     height: 75px;
 }
     .profile-pic {
+        max-height:60px;
+        max-width:90px;
+        width: auto;
+        height: auto;
         border-radius: 50%;
         position: relative;
         left: 10%;
         top: 10%;
+        border: 5x 6px 5x solid black;
     }
     .name {
         margin-top: 0.5rem;
@@ -107,11 +112,12 @@ main {
     background-color: rgb(229, 231, 238);
     overflow: auto;
     height: calc(80vh - 75px) !important;
+    padding-bottom: 25px;
 }
     .caixa-de-mensagens {
         padding-left: 15px;
         padding-right: 15px;
-        padding-bottom: 25px;
+        padding-bottom: 8% !important;
     }
     .message {  /* Todas as mensagens*/
         margin: 10px;

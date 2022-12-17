@@ -1,10 +1,15 @@
-let login = {
-  value: "true",
-  email: "art",
-};
+  let login = {                              
+    value:"true",                         
+    email:`artur@`,      
+    nome:`Artur `,
+    placa:`lobomau`,
+  };
 sessionStorage.setItem("login", JSON.stringify(login));
 let loginSTR = sessionStorage.getItem("login");
 let loginOBJ = JSON.parse(loginSTR);
+
+let loginFakeSTR = sessionStorage.getItem("loginFake");
+let loginFakeOBJ = JSON.parse(loginFakeSTR);
 
 var message = new Object();
 
@@ -20,12 +25,15 @@ function mostraMensagens() {  // Pega mensagens do storage
   let divChat = '';
     for (let i = 0; i < messages.length; i++) {
       let allmsg = messages[i];
-      if (login.email == allmsg.email) {
+      if (loginOBJ.email == allmsg.email) {
         divChat += `<p class="message user_message">${allmsg.conteudo}</p>`
+        document.querySelector(".name").innerHTML = loginOBJ.nome;
+        document.querySelector(".about").innerHTML = loginOBJ.placa;
       }
-      if (login.email != allmsg.email) {
+      if (loginOBJ.email != allmsg.email) {
         divChat += `<p class="message other-user_message">${allmsg.conteudo}</p>`
-
+          document.querySelector(".name").innerHTML = loginFakeOBJ.nome;
+          document.querySelector(".about").innerHTML = loginFakeOBJ.placa;
       }
     }
 

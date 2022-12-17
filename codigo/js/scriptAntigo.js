@@ -68,9 +68,7 @@ else {
 let email = document.getElementById('email');
 let senha = document.getElementById('senha');
 let nome = document.getElementById('Nome')
-let placa = document.getElementById('placa')
-
-
+let cpf = document.getElementById('cpf')
 
 function Cadastrar() {
     let listaUser= JSON.parse(localStorage.getItem('listaUser') || '[]')
@@ -79,9 +77,7 @@ function Cadastrar() {
         {
             nomeCad: nome.value,
             emailCad: email.value,
-            senhaCad: senha.value,
-            placaCad: placa.value
-           
+            senhaCad: senha.value
         }
     )
 
@@ -109,7 +105,6 @@ cadastrar.addEventListener('click', (event)=> {
 
 } )
 
-
 function entrar () {
    let cadastrar = document.querySelector("#cadastrar") 
    let usuario = document.getElementById('email')
@@ -130,14 +125,12 @@ function entrar () {
             }
 
             alert("Login realizado com sucesso")
-            let login = {                              
-                value:"true",                         
-                email:`${listaUser.item.emailCad}`,      
-                nome:`${listaUser.item.nomeCad}`,
-                placa:`${listaUser.item.placaCad}`,
+            let login = {                               //mudança feita pelo artur
+                value:"true",                          //mudança feita pelo artur
+                email:`${listaUser.item.emailCad}`,      //mudança feita pelo artur
             };
-            sessionStorage.setItem("login", JSON.stringify(login));
-            
+            sessionStorage.setItem("login", JSON.stringify(login));    //mudança feita pelo artur
+
     
         }
         
