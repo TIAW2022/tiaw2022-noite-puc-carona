@@ -69,6 +69,7 @@ let email = document.getElementById('email');
 let senha = document.getElementById('senha');
 let nome = document.getElementById('Nome')
 let placa = document.getElementById('placa')
+let cep = document.getElementById('cep')
 
 
 
@@ -80,7 +81,8 @@ function Cadastrar() {
             nomeCad: nome.value,
             emailCad: email.value,
             senhaCad: senha.value,
-            placaCad: placa.value
+            placaCad: placa.value,
+            cepCad: cep.value
            
         }
     )
