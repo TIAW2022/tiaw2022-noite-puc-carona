@@ -41,10 +41,10 @@
                     <a class="nav-link" aria-current="page" href="/codigo/html/index.html">Inicio</a>
                   </li>
                   <li class="nav-item" id="gpsOrChatID">
-                    <a class="nav-link" aria-current="page" href="/codigo/html/cadastro.html">Cadastro</a>
+                    <a class="nav-link" aria-current="page" href="/codigo/html/carona.html">Carona</a>
                   </li>
                   <li class="nav-item" id="loginID">
-                     <a class="nav-link" aria-current="page" href="#">Login</a>
+                     <a class="nav-link" aria-current="page"  href="#" onclick="logout()">Logout</a>
                   </li>
                 </ul>
               </div>
@@ -52,7 +52,7 @@
           </div>
         </nav>
       </div>
-
+      <main>
     <div class="container">
         <div class="main-body">
 
@@ -64,19 +64,19 @@
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
                                         <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="Admin"
-                                            class="rounded-circle p-1 bg-primary" width="160">
-                                            Alterar foto
-                                            <input type="file" class="account-settings-fileinput">
+                                            class="rounded-circle p-1 bg-primary" width="220">
+                                           
+                                            
                                           </label> &nbsp;
                                           
-                                            <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                            
                                             <div class="mt-3">
-                                            <h4>John Doe</h4>
+                                            
                                             <div class="text-secondary mb-1"><input type="text" class="form-control"
-                                                    value="Full Stack Developer"></div>
+                                                    value=" Lorrane "></div>
 
                                             <p class="text-muted font-size-sm"><input type="text" class="form-control"
-                                                    value="John Doe"></p>
+                                                    value=" 22 anos"></p>
 
                                         </div>
                                     </div>
@@ -96,53 +96,50 @@
                                 <div class="card-body">
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Nome</h6>
+                                            <label="mb-0">Nome</label>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="John Doe">
+                                        <input id= "name" type="text" class="form-control" value="Lorrane Silveira">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">E-mail</h6>
+                                            <label>E-mail</label>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="email" class="form-control" value="">
+                                      <input id="email" type="email" class="form-control" value="Maria@gmail.com">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Telefone</h6>
+                                            <label>Telefone</label>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="tel" class="form-control" value="">
+                                            <input id= "telefone" type="tel"  class="form-control" value="31993451896">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Data de nascimento</h6>
+                                            <label>Data de nascimento</label>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="date" class="form-control" value="">
+                                            <input id= "data de nascimento" type="text"  class="form-control" value="18/11/2000">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Endereço</h6>
+                                            <label>Endereço </label>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                       <input id= "endereço" type="text"  class="form-control" value=" Rua Dom pedro I , 415">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-info">
-                                            <form>
-                                                <a href="index.html"> <input type="button" class="btn btn-primary px-4"
-                                                        value="Salvar Alterações" onclick="msg()"> </a>
-                                            </form>
-
+                                           
+                                         
 
                                         </div>
                                     </div>
@@ -153,12 +150,15 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="d-flex align-items-center mb-3">Sobre Mim</h5>
-                                            <p class="text-muted font-size-sm"><input type="text" class="form-control"
-                                                    value="John Doe"></p>
-                                            <div class="text-center" style="height: 75px">
-
+                                            <p class="text-muted font-size-md"><input type="text" class="form-control"
+                                                    value="  Estudante de Educação Física na PUC Minas"></p>
+                                                    <div class="text-center" style="height: 75px">
+                                                    <div class="col-sm-9 text-info">
+                                                        <input type="submit" class="btn btn-primary px-4" value=" Salvar"  />
+                                                               
+                                                    </form>
+                                           
                                             </div>
-
 
                                         </div>
                                     </div>
@@ -169,6 +169,13 @@
                 </div>
             </div>
         </div>
+    </main>
+        <footer class="footer-chat" >   <!-- Footer -->
+            <div class="footer">
+            © 2022 Copyright:
+            <a class="texto-footer" href="/codigo/html/termos-de-uso.html">Puc Carona</a>
+            </div>
+        </footer>
 </body>
 
 </html>
