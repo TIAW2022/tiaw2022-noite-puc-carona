@@ -134,7 +134,7 @@ function entrar () {
                 nome: item.emailCad,
                 senha: item.senhaCad
             }
-            console.log("Login com sucesso.")
+            alert("Login realizado com sucesso.")
             let login = {                              
                 value:"true",                         
                 email:`${item.emailCad}`,      
