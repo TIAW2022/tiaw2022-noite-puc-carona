@@ -58,3 +58,27 @@ body {
 text-align: center;
 padding-top: 1.8rem;
 }
+#politica{
+    text-align: center;
+}
+.footer-chat {
+    color: white;
+    background: rgb(7, 126, 182);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding:10px;
+    height: 42px;
+    margin: 50px solid rgb(17, 17, 22);
+    text-align: center;
+    position: fixed;
+}
+    footer a {
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+.container{
+font-size: 11pt;}
