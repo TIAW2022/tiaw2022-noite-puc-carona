@@ -41,10 +41,10 @@
                 <a class="nav-link" aria-current="page" href="/codigo/html/index.html">Inicio</a>
               </li>
               <li class="nav-item" id="gpsOrChatID">
-                <a class="nav-link" aria-current="page" href="/codigo/html/cadastro.html">Cadastro</a>
+                <a class="nav-link" aria-current="page" href="/codigo/html/carona.html">Carona</a>
               </li>
               <li class="nav-item" id="loginID">
-                <a class="nav-link" aria-current="page" href="#">Login</a>
+                <a class="nav-link" aria-current="page" href="#">Logout</a>
               </li>
             </ul>
           </div>
@@ -52,8 +52,39 @@
       </div>
     </nav>
   </div>
+  <script>
+    const myKeyValue = window.location.search;
+    const urlParams = new URLSearchParams(myKeyValue);
+    const id = urlParams.get('nome');
+    console.log(id);
+    comparar()
+    function comparar(id) {
+      if (id == null) {
+        alert("perfil inacessível")
 
-  <section class="h-100 gradient-custom-2">
+      }
+      else {
+        let lista = JSON.parse(localStorage.getItem("listaUser"));
+        console.log(lista)
+        for (let index = 1; index < lista.length; indez++) {
+          let i = 0;
+          const usuario = lista[index];
+          const segurança = lista[i];
+
+          var nomes = document.getElementById(index);
+          if (id == usuario.nomeCad) {
+            alert("perfil cadastrado")
+          }
+
+
+        }
+
+
+      }
+    }
+
+  </script>
+  <main class="h-100 gradient-custom-2">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-lg-9 col-xl-7">
@@ -62,7 +93,7 @@
               style="background-color: rgb(25, 62, 184); height:200px;">
               <div class="ms-4 mt-5 d-flex flex-column" style="width: 170px;">
                 <img
-                  src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2018/03/formacao_1600x1200-como-a-presenca-da-mulher-pode-ser-harmonia-no-mundo.jpg"
+                  src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                   alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                   style="width: 150px; z-index: 1">
 
@@ -84,7 +115,7 @@
             </div>
             <div class="card-body p-4 text-black">
               <div class="mb-5">
-                <p class="lead fw-normal mb-1">Sobre</p>
+                <p class="lead fw-normal mb-2">Sobre</p>
                 <div class="p-4" style="background-color: #f8f9fa;">
                   <p class="font-italic mb-1">Gosto de musicas</p>
                   <p class="font-italic mb-1"> Gosto de ler livros</p>
@@ -94,28 +125,12 @@
               </div>
 
             </div>
-            <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark" style="z-index: 1;">
-              Comentarios </button>
-          </div>
-          <div class="card-body p-6 text-black">
-            <div class="mb-5">
-              <div class="ms-3" style="margin-top: -10px;"></div>
 
-              <div class="p-6  comments" style="background-color: whitesmoke;">
-                <h6 class="font-italic mb-1">luiza martins</h6>
-                <p class=> Otima passageira, tivemos otimas conversas na carona.</p>
-                <h6 class="font-italic mb-1">Jorge Luis</h6>
-                <p class=> Muito bacana a viagem.</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    </div>
-  </section>
-</body>
+    
+  </main>
 
 </html>
