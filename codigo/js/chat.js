@@ -40,12 +40,7 @@ function mostraMensagens() {  // Pega mensagens do storage
   let divChat ="";
   for (let i = 0; i < messages.length; i++) {
     let allmsg = messages[i];
-    console.log(allmsg.email); 
-    console.log(emailOutro); 
     let temp;
-    console.log(loginOBJ.email);
-    console.log(allmsg.email);
-
     if (loginOBJ.email == allmsg.email) {
       console.log("user")
       temp = "user_message";
@@ -114,3 +109,9 @@ if (nomeOutro == undefined) {
   document.getElementById('chat-conteudoMensagens').innerHTML = aviso;
 
 }
+
+document.getElementById("chat-header").addEventListener("click", (event) => { //quando clicar, envia p/ pagina de perfil do outro.
+  console.log("SIMSIM")
+  window.location.href = `./perfil-do-outro.html?nome=${id}`;
+
+});
