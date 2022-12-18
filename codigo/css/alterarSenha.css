@@ -1,0 +1,149 @@
+body{
+ 
+    background-color:rgb(15, 150, 213) ; 
+    padding: 5px;   
+    }
+    
+    .form{
+      width: 400px;
+      padding: 30px;
+      background-color: white;
+      border:1px solid #ccc;
+      text-align: center;
+      
+    }
+    .formulario p{
+      width: 100%;
+      font-size: 1.5em;
+    }
+    .field{
+      width: 100%;
+      margin: 15px 0;
+    }
+    
+    main {
+      background-color: rgb(15, 150, 213);
+      padding: 12%; 
+     
+      
+    
+    }
+    
+    
+    
+    
+    input#nao{
+      margin-left: 30px;
+    }
+    textarea{
+      line-height: 40px;
+      padding: 30px;
+      height: 100px;
+      resize: none;
+    }
+    input[type=submit]{
+      display: block;
+      background-color: #ccc;
+      height: 35px;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      width: 100px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 15px;
+    }
+    
+    /* HEADER */
+    @media (max-width:991.98px) {
+      #header .baixo {
+          width: 100%;
+      }
+    }
+    
+    .navbar-toggler {
+      border-color: #222222;
+    }
+    
+    .toggler-icon {
+      color: white;
+    }
+    
+    .logo {
+      padding-left: 5%;
+    }
+    
+    #header {
+      width: 100%;
+      background-color: #1875a0;
+    }
+    
+    #header.active {
+      z-index: 9999;
+      box-shadow: 5px 4px 10px black;
+      
+    }
+    
+    .nav-link {
+      color: white;
+      font-weight: bold;
+    }
+    
+    .navbar ul li a:hover {
+      color: rgb(66, 115, 184);
+      text-shadow: 2px 2px 3px rgb(10, 36, 73);
+    }
+    
+    .navbar ul li {
+      text-shadow: 2px 1px 3px rgb(10, 36, 73);
+    }
+    .nav-item {
+      font-size: larger;
+      font-weight: bolder;
+    }
+    
+    /* FOOTER */
+.footer-chat {
+    color: white;
+    background: rgb(7, 126, 182);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding:10px;
+    height: 42px;
+    margin: 50px solid rgb(17, 17, 22);
+    text-align: center;
+}
+    footer a {
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+/* Responsivo */
+@media (max-width: 576px) {
+    #container {
+        margin-top: 10px;
+        background-color: rgb(162, 196, 228, 10);
+        height: 80vh;
+        width: 95% !important;
+        position: block !important;
+        left: 2.5% !important;
+        transform: none !important;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: none !important ;
+    }
+    #chat-header > .row {
+        --bs-gutter-x:none;
+    }
+    .col-10 {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+    .col-2 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
