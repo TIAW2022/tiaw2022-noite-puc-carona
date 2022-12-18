@@ -36,10 +36,10 @@ function logout() {
 
   window.location.href = "./index.html";
 }
+let loginSTR = sessionStorage.getItem("login");
+let loginOBJ = JSON.parse(loginSTR);
 
 function verificaLoginGPS() {
-  let loginSTR = sessionStorage.getItem("login");
-  let loginOBJ = JSON.parse(loginSTR);
 
   if (loginOBJ.value != "true") {
     console.log("Não há usuario logado.");
@@ -55,9 +55,18 @@ for (let index = 1; index < lista.length; index++) {
   const seguranca = lista[i]; //Essa linha manda para o "segurança" todos os dados da pessoa logada
   var cepSeguro = seguranca.cepCad; // Essa linha faz com que o cepSeguro seja o cep da pessoa logada
   // <--Funcionamento do If . compara se o cep das pessoas cadastradas é o mesmo que o do usuario logado , logo após a verificação ele mostra todos que tem o mesmo cep que o usuario logado
-  if (usuario.cepCad === cepSeguro && usuario.nome !=seguranca.nome) {
+  if (usuario.cepCad === cepSeguro) {
+    console.log(usuario.nomeCad)
+    console.log(seguranca.nomeCad)
+    
+    //if(usuario.nomeCad == seguranca.nomeCad) {
     var nomes = document.getElementById(index);
-    var nome = `<a href="/codigo/html/chat.html?nome=${usuario.nomeCad}">` + usuario.nomeCad;
+    if(loginOBJ.nome === usuario.nomeCad) {
+      var nome = `<a href="/codigo/html/chat.html?nome=${seguranca.nomeCad}">` + seguranca.nomeCad;
+    } else {
+      var nome = `<a href="/codigo/html/chat.html?nome=${usuario.nomeCad}">` + usuario.nomeCad;
+    }
     nomes.innerHTML = nome; //Essa linha irá mostrar só o nome da pessoa da linha 0, depois da linha 1...
+    //}
   }
 }
