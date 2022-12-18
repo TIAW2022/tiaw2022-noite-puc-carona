@@ -1,28 +1,6 @@
 var btn = document.getElementById("clicker");
 var gpsOn = document.getElementById("gpsOn");
 var chat = document.getElementById("chat");
-let permissao = {
-  value: "",
-};
-sessionStorage.setItem("permissao", JSON.stringify(permissao));
-
-//usuario real
-let login = {
-  value: "true",
-  email: `artur@`,
-  nome: `Artur `,
-  placa: `1111`,
-};
-sessionStorage.setItem("login", JSON.stringify(login));
-//conecta o usuario com um "fake";
-var loginFake = {
-  value: "true",
-  email: `polia@gmail.com`,
-  nome: `Poliana Mendes`,
-  placa: `PX314J`,
-  foto: "https://midias.correiobraziliense.com.br/_midias/jpg/2022/05/20/poliana_moca-25696303.jpg",
-};
-sessionStorage.setItem("loginFake", JSON.stringify(loginFake));
 
 btn.onclick = function () {
   if (btn.value === "gpsOn") {
@@ -35,11 +13,6 @@ btn.onclick = function () {
       chat.innerHTML = "<a style='color: red;'>Chat¹</a>";
       gpsOn.src =
         "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15009.530029469295!2d-43.93892873078231!3d-19.866063904366985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0xa69ac3c5437e8f%3A0xaf89be1db1ea54e6!2sPUC%20Minas%20S%C3%A3o%20Gabriel%20-%20Rua%20Walter%20Ianni%2C%20255%20-%20S%C3%A3o%20Gabriel%2C%20Belo%20Horizonte%20-%20MG%2C%2031980-110!3m2!1d-19.859405499999998!2d-43.9189307!4m5!1s0xa69a62f352e7b7%3A0xea5a87b5813d4dc3!2sAvenida%20Jos%C3%A9%20Cleto%20-%20Santa%20Cruz%2C%20Belo%20Horizonte%20-%20MG%2C%2031155-290!3m2!1d-19.872337299999998!2d-43.9415925!5e0!3m2!1spt-BR!2sbr!4v1671123469879!5m2!1spt-BR!2sbr";
-      // p chat
-      let permissao = {
-        value: "true",
-      };
-      sessionStorage.setItem("permissao", JSON.stringify(permissao));
     } else {
       gpsOn.src =
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.5400445289206!2d-43.9189307!3d-19.859405499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69ac3c5437e8f%3A0xaf89be1db1ea54e6!2sPUC%20Minas%20S%C3%A3o%20Gabriel!5e0!3m2!1spt-BR!2sbr!4v1671200399065!5m2!1spt-BR!2sbr";
@@ -47,27 +20,19 @@ btn.onclick = function () {
       btn.innerHTML = "<h1>Buscar Carona</h1>";
       chat.innerHTML = "<a>Chat</a>";
       // p chat
-      let permissao = {
-        value: "false",
-      };
-      sessionStorage.setItem("permissao", JSON.stringify(permissao));
     }
   }, 3000);
 };
 
 function logout() {
   alert("Deslogado com sucesso...");
-
-  let login = {
-    value: "false",
-    email: "",
-  };
+  let login = {                              
+    value:"false",                         
+    email:``,      
+    nome:``,
+    placa:``,
+};
   sessionStorage.setItem("login", JSON.stringify(login));
-
-  let permissao = {
-    value: "false",
-  };
-  sessionStorage.setItem("permissao", JSON.stringify(permissao));
 
   window.location.href = "./index.html";
 }
@@ -90,9 +55,9 @@ for (let index = 1; index < lista.length; index++) {
   const seguranca = lista[i]; //Essa linha manda para o "segurança" todos os dados da pessoa logada
   var cepSeguro = seguranca.cepCad; // Essa linha faz com que o cepSeguro seja o cep da pessoa logada
   // <--Funcionamento do If . compara se o cep das pessoas cadastradas é o mesmo que o do usuario logado , logo após a verificação ele mostra todos que tem o mesmo cep que o usuario logado
-  if (usuario.cepCad === cepSeguro) {
+  if (usuario.cepCad === cepSeguro && usuario.nome !=seguranca.nome) {
     var nomes = document.getElementById(index);
-    var nome = usuario.nomeCad;
+    var nome = `<a href="/codigo/html/chat.html?nome=${usuario.nomeCad}">` + usuario.nomeCad;
     nomes.innerHTML = nome; //Essa linha irá mostrar só o nome da pessoa da linha 0, depois da linha 1...
   }
 }

@@ -116,7 +116,7 @@ main {
 }
     .caixa-de-mensagens {
         padding-left: 15px;
-        padding-right: 15px;
+        padding-right: 150px !important;
         padding-bottom: 8% !important;
     }
     .message {  /* Todas as mensagens*/

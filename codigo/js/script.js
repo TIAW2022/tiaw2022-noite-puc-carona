@@ -126,21 +126,25 @@ function entrar () {
    
     listaUser.forEach(item => {
         if(usuario.value==item.emailCad && senha.value ==item.senhaCad) {
+            console.log("Login-> item...")
+            console.log(item.emailCad)
+
+
             userValid = {
                 nome: item.emailCad,
                 senha: item.senhaCad
             }
-
-            alert("Login realizado com sucesso")
+            console.log("Login com sucesso.")
             let login = {                              
                 value:"true",                         
-                email:`${listaUser.item.emailCad}`,      
-                nome:`${listaUser.item.nomeCad}`,
-                placa:`${listaUser.item.placaCad}`,
+                email:`${item.emailCad}`,      
+                nome:`${item.nomeCad}`,
+                placa:`${item.placaCad}`,
             };
             sessionStorage.setItem("login", JSON.stringify(login));
-            
-    
+            window.open('/codigo/html/carona.html');
+
+
         }
         
         
