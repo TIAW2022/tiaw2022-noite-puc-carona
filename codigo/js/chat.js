@@ -83,8 +83,6 @@ function logout() {
 };
   sessionStorage.setItem("login", JSON.stringify(login));   //limpa dados de login
 
- // localStorage.setItem("messages", JSON.stringify(""));  //limpa dados de chat
-
   window.location.href = "./index.html";
 }
 
