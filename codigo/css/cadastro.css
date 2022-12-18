@@ -54,3 +54,7 @@ body {
     font-size: larger;
     font-weight: bolder;
 }
+#botoes{
+text-align: center;
+padding-top: 1.8rem;
+}
