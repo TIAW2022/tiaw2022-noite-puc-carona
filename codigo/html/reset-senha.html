@@ -75,66 +75,92 @@
                       <input id="email" name="email" placeholder="Endereço de email" class="form-control" type="email">
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <input name="recover-submit" class="btn btn-lg btn-primary btn-block"
-                        value="Reset de senha">
+              
+                    <a  href="alteracaoSenha.html"> <input name="recover-submit"
+                        class="btn btn-lg btn-primary btn-block" value="Reset de senha"> </a>
 
                   </div>
-
-                  <input type="hidden" class="hide" name="token" id="token" value="">
-
-                </form>
-
               </div>
+
+              <input type="hidden" class="hide" name="token" id="token" value="">
+
+              </form>
+
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </main>
+  <footer class="footer-chat" >   <!-- Footer -->
+    <div class="footer">
+    © 2022 Copyright:
+    <a class="texto-footer" href="/codigo/html/termos-de-uso.html">Puc Carona</a>
+    </div>
+</footer>
 
 </body>
 <script>
   console.log("hellou")
- 
- function isLogged() { //verifica se alguem esta logado e retorna
-   console.log("...")
-   let loginSTR = sessionStorage.getItem("login");
-   let loginOBJ = JSON.parse(loginSTR);
- 
-   if (loginOBJ.value == "true" && loginOBJ.email != "") {
-     console.log("Há usuario logado")
-     return true;
-   } else {
-     console.log("Não há usuario logado")
-     return false;
-   }
- }
- 
- if (isLogged()) { //imprime no header diferentes entradas;
-   let text = `<a class="nav-link" aria-current="page" href="/codigo/html/index.html" onclick="logout()">Logout</a>`
-   document.getElementById('loginElogout').innerHTML = text;
-   let text2 = `<a class="nav-link" aria-current="page" href="/codigo/html/carona.html">Carona</a>`
-   document.getElementById('loginID').innerHTML = text2;
- 
- } else {
-   let text = `<a class="nav-link" aria-current="page" href="/codigo/html/login.html">Login</a>`
-   document.getElementById('loginElogout').innerHTML = text;
- }
- 
- 
- function logout() {
-   alert("Deslogado com sucesso...");
-   let login = {
-     value: "false",
-     email: ``,
-     nome: ``,
-     placa: ``,
-   };
-   sessionStorage.setItem("login", JSON.stringify(login));
- 
-   window.location.href = "./index.html";
- }
- 
+
+  function isLogged() { //verifica se alguem esta logado e retorna
+    console.log("...")
+    let loginSTR = sessionStorage.getItem("login");
+    let loginOBJ = JSON.parse(loginSTR);
+
+    if (loginOBJ.value == "true" && loginOBJ.email != "") {
+      console.log("Há usuario logado")
+      return true;
+    } else {
+      console.log("Não há usuario logado")
+      return false;
+    }
+  }
+
+  if (isLogged()) { //imprime no header diferentes entradas;
+    let text = `<a class="nav-link" aria-current="page" href="/codigo/html/index.html" onclick="logout()">Logout</a>`
+    document.getElementById('loginElogout').innerHTML = text;
+    let text2 = `<a class="nav-link" aria-current="page" href="/codigo/html/carona.html">Carona</a>`
+    document.getElementById('loginID').innerHTML = text2;
+
+  } else {
+    let text = `<a class="nav-link" aria-current="page" href="/codigo/html/login.html">Login</a>`
+    document.getElementById('loginElogout').innerHTML = text;
+  }
+
+
+  function logout() {
+    alert("Deslogado com sucesso...");
+    let login = {
+      value: "false",
+      email: ``,
+      nome: ``,
+      placa: ``,
+    };
+     Storage.setItem("login", JSON.stringify(login));
+
+    window.location.href = "./index.html";
+  }
+  let usuario = document.getElementById('email')
+  
+  let lista = JSON.parse(localStorage.getItem("listaUser")); //Esta linha pega todos os usuários que estão no localstorage
+for (let index = 0; index < lista.length; index++) {
+  let i = 0;
+  const usuario = lista[index]; //Essa linha manda para "usuário" todos os dados da pessoa cadastrada na linha 0, depois na linha 1, e assim por diante (nome, cep e etc).
+  const seguranca = lista[i]; //Essa linha manda para o "segurança" todos os dados da pessoa logada
+  var cepSeguro = seguranca.cepCad; // Essa linha faz com que o cepSeguro seja o cep da pessoa logada
+  // <--Funcionamento do If . compara se o cep das pessoas cadastradas é o mesmo que o do usuario logado , logo após a verificação ele mostra todos que tem o mesmo cep que o usuario logado
+  if (usuario.emailCad === email.input) {
+    alert('email existe!')
+  }
+  else{
+    alert('email não existe!')
+
+  }
+}
 </script>
+
 </html>
