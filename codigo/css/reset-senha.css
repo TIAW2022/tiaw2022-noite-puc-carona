@@ -65,3 +65,49 @@ padding: 0%;
     font-size: larger;
     font-weight: bolder;
 }
+
+/* FOOTER */
+.footer-chat {
+    color: white;
+    background: rgb(7, 126, 182);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding:10px;
+    height: 42px;
+    margin: 50px solid rgb(17, 17, 22);
+    text-align: center;
+}
+    footer a {
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+/* Responsivo */
+@media (max-width: 576px) {
+    #container {
+        margin-top: 10px;
+        background-color: rgb(162, 196, 228, 10);
+        height: 80vh;
+        width: 95% !important;
+        position: block !important;
+        left: 2.5% !important;
+        transform: none !important;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: none !important ;
+    }
+    #chat-header > .row {
+        --bs-gutter-x:none;
+    }
+    .col-10 {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+    .col-2 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
