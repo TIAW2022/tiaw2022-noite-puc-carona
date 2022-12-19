@@ -78,7 +78,7 @@
 
                   <div class="form-group">
               
-                    <a  href="alteracaoSenha.html"> <input name="recover-submit"
+                    <a  href="/codigo/html/alteraracaoSenha.html"> <input name="recover-submit"
                         class="btn btn-lg btn-primary btn-block" value="Reset de senha"> </a>
 
                   </div>
@@ -144,23 +144,10 @@
 
     window.location.href = "./index.html";
   }
-  let usuario = document.getElementById('email')
-  
-  let lista = JSON.parse(localStorage.getItem("listaUser")); //Esta linha pega todos os usuários que estão no localstorage
-for (let index = 0; index < lista.length; index++) {
-  let i = 0;
-  const usuario = lista[index]; //Essa linha manda para "usuário" todos os dados da pessoa cadastrada na linha 0, depois na linha 1, e assim por diante (nome, cep e etc).
-  const seguranca = lista[i]; //Essa linha manda para o "segurança" todos os dados da pessoa logada
-  var cepSeguro = seguranca.cepCad; // Essa linha faz com que o cepSeguro seja o cep da pessoa logada
-  // <--Funcionamento do If . compara se o cep das pessoas cadastradas é o mesmo que o do usuario logado , logo após a verificação ele mostra todos que tem o mesmo cep que o usuario logado
-  if (usuario.emailCad === email.input) {
-    alert('email existe!')
-  }
-  else{
-    alert('email não existe!')
 
-  }
-}
+
+  
+
 </script>
 
 </html>
